@@ -1,0 +1,1012 @@
+{
+  "Cars": [
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Suzuki Alto Man",
+        "carGroup": "B",
+        "seats": 4,
+        "baggage": "1 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmission": "Automatic",
+        "doors": 4,
+        "ImageUrl": "src=https://rent.albar.co.il/CarImages/Rent/CarCategories/10t1.jpg"
+      },
+      "price": 43,
+      "priceCondition": {
+        "dailyLowOneTwo": 10,
+        "dailyHighOneTwo": 22,
+        "dailyLowThreeSix": 10,
+        "dailyHighThreeSix": 22,
+        "weeklyLow": 63,
+        "weeklyHigh": 147,
+        "exDayLow": 9,
+        "exDayHigh": 21,
+        "monthLow": 610,
+        "monthHigh": 790
+      },
+      "eKm": 0.45,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 42,
+        "station": 45.05
+      },
+      "protection": {
+        "insurance_CDW": 10,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 10,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Fiat 500  (2 Doors)",
+        "carGroup": "Q",
+        "seats": 2,
+        "baggage": " 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 2,
+        "ImageUrl": "src=https://rent.albar.co.il/CarImages/Rent/CarCategories/15t1.jpg"
+      },
+      "price": 78,
+      "priceCondition": {
+        "dailyLowOneTwo": 10,
+        "dailyHighOneTwo": 22,
+        "dailyLowThreeSix": 10,
+        "dailyHighThreeSix": 22,
+        "weeklyLow": 63,
+        "weeklyHigh": 147,
+        "exDayLow": 9,
+        "exDayHigh": 21,
+        "monthLow": 610,
+        "monthHigh": 790
+      },
+      "eKm": 0.45,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 42,
+        "station": 45.05
+      },
+      "protection": {
+        "insurance_CDW": 10,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Kia Picanto",
+        "carGroup": "C",
+        "seats": 4,
+        "baggage": "1 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src=https://rent.albar.co.il/CarImages/Rent/CarCategories/30t1.jpg"
+      },
+      "price": 79.50,
+      "priceCondition": {
+        "dailyLowOneTwo": 11,
+        "dailyHighOneTwo": 23,
+        "dailyLowThreeSix": 11,
+        "dailyHighThreeSix": 23,
+        "weeklyLow": 70,
+        "weeklyHigh": 154,
+        "exDayLow": 10,
+        "exDayHigh": 22,
+        "monthLow": 620,
+        "monthHigh": 800
+      },
+      "eKm": 0.45,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 42,
+        "station": 45.05
+      },
+      "protection": {
+        "insurance_CDW": 10,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Hyundai i20",
+        "carGroup": "D",
+        "seats": 4,
+        "baggage": "1 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src=https://rent.albar.co.il/CarImages/Rent/CarCategories/20t1.jpg"
+      },
+      "price": 82.50,
+      "priceCondition": {
+        "dailyLowOneTwo": 12,
+        "dailyHighOneTwo": 24,
+        "dailyLowThreeSix": 12,
+        "dailyHighThreeSix": 24,
+        "weeklyLow": 77,
+        "weeklyHigh": 161,
+        "exDayLow": 11,
+        "exDayHigh": 23,
+        "monthLow": 630,
+        "monthHigh": 810
+      },
+      "eKm": 0.45,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 10,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Ford Fiesta",
+        "carGroup": "D",
+        "seats": 5,
+        "baggage": "1 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src=https://rent.albar.co.il/CarImages/Rent/CarCategories/50t.jpg"
+      },
+      "price": 85.50,
+      "priceCondition": {
+        "dailyLowOneTwo": 13,
+        "dailyHighOneTwo": 25,
+        "dailyLowThreeSix": 13,
+        "dailyHighThreeSix": 25,
+        "weeklyLow": 84,
+        "weeklyHigh": 168,
+        "exDayLow": 12,
+        "exDayHigh": 24,
+        "monthLow": 645,
+        "monthHigh": 825
+      },
+      "eKm": 0.45,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 10,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Hyundai Accent i25",
+        "carGroup": "F",
+        "seats": 5,
+        "baggage": "1 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/60t1.jpg"
+      },
+      "price": 98.25,
+      "priceCondition": {
+        "dailyLowOneTwo": 16,
+        "dailyHighOneTwo": 28,
+        "dailyLowThreeSix": 16,
+        "dailyHighThreeSix": 28,
+        "weeklyLow": 98,
+        "weeklyHigh": 182,
+        "exDayLow": 14,
+        "exDayHigh": 26,
+        "monthLow": 750,
+        "monthHigh": 930
+      },
+      "eKm": 0.5,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 11,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "VW Golf",
+        "carGroup": "I",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/90t1.jpg"
+      },
+      "price": 110.85,
+      "priceCondition": {
+        "dailyLowOneTwo": 18,
+        "dailyHighOneTwo": 30,
+        "dailyLowThreeSix": 18,
+        "dailyHighThreeSix": 30,
+        "weeklyLow": 112,
+        "weeklyHigh": 196,
+        "exDayLow": 16,
+        "exDayHigh": 28,
+        "monthLow": 790,
+        "monthHigh": 970
+      },
+      "eKm": 0.5,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 11,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Seat Leon SW",
+        "carGroup": "IW",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/91t1.jpg"
+      },
+      "price": 117.00,
+      "priceCondition": {
+        "dailyLowOneTwo": 20,
+        "dailyHighOneTwo": 32,
+        "dailyLowThreeSix": 20,
+        "dailyHighThreeSix": 32,
+        "weeklyLow": 126,
+        "weeklyHigh": 210,
+        "exDayLow": 18,
+        "exDayHigh": 30,
+        "monthLow": 820,
+        "monthHigh": 1000
+      },
+      "eKm": 0.5,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 11,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "VW Jetta",
+        "carGroup": "H",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/80t.jpg"
+      },
+      "price": 123.45,
+      "priceCondition": {
+        "dailyLowOneTwo": 24,
+        "dailyHighOneTwo": 36,
+        "dailyLowThreeSix": 24,
+        "dailyHighThreeSix": 36,
+        "weeklyLow": 154,
+        "weeklyHigh": 238,
+        "exDayLow": 22,
+        "exDayHigh": 34,
+        "monthLow": 960,
+        "monthHigh": 1140
+      },
+      "eKm": 0.5,
+      "excess": 715,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 11,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 150,
+        "insurance_SuperTPMonth": 70
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Mazda 6",
+        "carGroup": "M",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/130t.jpg"
+      },
+      "price": 160.80,
+      "priceCondition": {
+        "dailyLowOneTwo": 31,
+        "dailyHighOneTwo": 46,
+        "dailyLowThreeSix": 31,
+        "dailyHighThreeSix": 46,
+        "weeklyLow": 196,
+        "weeklyHigh": 301,
+        "exDayLow": 28,
+        "exDayHigh": 43,
+        "monthLow": 1050,
+        "monthHigh": 1230
+      },
+      "eKm": 0.5,
+      "excess": 715,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 14,
+        "insurance_TP": 5,
+        "insurance_3PLC": 15,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 7,
+        "insurance_SuperCDWMonth": 150,
+        "insurance_SuperTPMonth": 70
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Hyundai Sonata",
+        "carGroup": "MH",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/135.png"
+      },
+      "price": 207.00,
+      "priceCondition": {
+        "dailyLowOneTwo": 42,
+        "dailyHighOneTwo": 57,
+        "dailyLowThreeSix": 42,
+        "dailyHighThreeSix": 57,
+        "weeklyLow": 266,
+        "weeklyHigh": 371,
+        "exDayLow": 38,
+        "exDayHigh": 53,
+        "monthLow": 1450,
+        "monthHigh": 1630
+      },
+      "eKm": 0.75,
+      "excess": 715,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 14,
+        "insurance_TP": 5,
+        "insurance_3PLC": 15,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 7,
+        "insurance_SuperCDWMonth": 150,
+        "insurance_SuperTPMonth": 70
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "BMW 318i",
+        "carGroup": "K",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/110.jpg"
+      },
+      "price": 321.45,
+      "priceCondition": {
+        "dailyLowOneTwo": 72,
+        "dailyHighOneTwo": 87,
+        "dailyLowThreeSix": 72,
+        "dailyHighThreeSix": 87,
+        "weeklyLow": 455,
+        "weeklyHigh": 560,
+        "exDayLow": 65,
+        "exDayHigh": 80,
+        "monthLow": 1590,
+        "monthHigh": 1770
+      },
+      "eKm": 0.75,
+      "excess": 715,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 14,
+        "insurance_TP": 5,
+        "insurance_3PLC": 15,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 7,
+        "insurance_SuperCDWMonth": 150,
+        "insurance_SuperTPMonth": 70
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "VW Passat",
+        "carGroup": "R",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/180t1.jpg"
+      },
+      "price": 266.85,
+      "priceCondition": {
+        "dailyLowOneTwo": 58,
+        "dailyHighOneTwo": 73,
+        "dailyLowThreeSix": 58,
+        "dailyHighThreeSix": 73,
+        "weeklyLow": 364,
+        "weeklyHigh": 469,
+        "exDayLow": 52,
+        "exDayHigh": 67,
+        "monthLow": 1640,
+        "monthHigh": 1820
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 14,
+        "insurance_TP": 5,
+        "insurance_3PLC": 15,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Nissan Maxima",
+        "carGroup": "P",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/160t3.jpg"
+      },
+      "price": 440.00,
+      "priceCondition": {
+        "dailyLowOneTwo": 79,
+        "dailyHighOneTwo": 109,
+        "dailyLowThreeSix": 79,
+        "dailyHighThreeSix": 109,
+        "weeklyLow": 497,
+        "weeklyHigh": 707,
+        "exDayLow": 71,
+        "exDayHigh": 101,
+        "monthLow": 2170,
+        "monthHigh": 2410
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 35,
+        "insurance_TP": 10,
+        "insurance_3PLC": 40,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Audi A6",
+        "carGroup": "W",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/230t.jpg"
+      },
+      "price": 563.00,
+      "priceCondition": {
+        "dailyLowOneTwo": 122,
+        "dailyHighOneTwo": 152,
+        "dailyLowThreeSix": 122,
+        "dailyHighThreeSix": 152,
+        "weeklyLow": 770,
+        "weeklyHigh": 980,
+        "exDayLow": 110,
+        "exDayHigh": 140,
+        "monthLow": 2690,
+        "monthHigh": 2930
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 35,
+        "insurance_TP": 10,
+        "insurance_3PLC": 40,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Renault Megane Coupe (2 Doors)",
+        "carGroup": "FX",
+        "seats": 5,
+        "baggage": "1 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 2,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/65t1.jpg"
+      },
+      "price": 99.00,
+      "priceCondition": {
+        "dailyLowOneTwo": 17,
+        "dailyHighOneTwo": 29,
+        "dailyLowThreeSix": 17,
+        "dailyHighThreeSix": 29,
+        "weeklyLow": 105,
+        "weeklyHigh": 189,
+        "exDayLow": 15,
+        "exDayHigh": 27,
+        "monthLow": 760,
+        "monthHigh": 940
+      },
+      "eKm": 0.5,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 11,
+        "insurance_TP": 5,
+        "insurance_3PLC": 12,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "VW Caddy Man",
+        "carGroup": "T",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/200t1.jpg"
+      },
+      "price": 268.50,
+      "priceCondition": {
+        "dailyLowOneTwo": 39,
+        "dailyHighOneTwo": 69,
+        "dailyLowThreeSix": 39,
+        "dailyHighThreeSix": 69,
+        "weeklyLow": 245,
+        "weeklyHigh": 455,
+        "exDayLow": 35,
+        "exDayHigh": 65,
+        "monthLow": 1050,
+        "monthHigh": 1290
+      },
+      "eKm": 0.75,
+      "excess": 475,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 15,
+        "insurance_TP": 10,
+        "insurance_3PLC": 20,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 5,
+        "insurance_SuperCDWMonth": 100,
+        "insurance_SuperTPMonth": 60
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Hyundai Tucson Aut",
+        "carGroup": "J",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 2     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/100t.jpg"
+      },
+      "price": 289.80,
+      "priceCondition": {
+        "dailyLowOneTwo": 42,
+        "dailyHighOneTwo": 72,
+        "dailyLowThreeSix": 42,
+        "dailyHighThreeSix": 72,
+        "weeklyLow": 266,
+        "weeklyHigh": 476,
+        "exDayLow": 38,
+        "exDayHigh": 68,
+        "monthLow": 1240,
+        "monthHigh": 1480
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 15,
+        "insurance_TP": 10,
+        "insurance_3PLC": 20,
+        "insurance_SuperCDW": 10,
+        "insurance_SuperTP": 7,
+        "insurance_SuperCDWMonth": 150,
+        "insurance_SuperTPMonth": 70
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Ford Edge Au",
+        "carGroup": "O",
+        "seats": 5,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/150t1.jpg"
+      },
+      "price": 342.00,
+      "priceCondition": {
+        "dailyLowOneTwo": 74,
+        "dailyHighOneTwo": 104,
+        "dailyLowThreeSix": 74,
+        "dailyHighThreeSix": 104,
+        "weeklyLow": 496,
+        "weeklyHigh": 679,
+        "exDayLow": 67,
+        "exDayHigh": 97,
+        "monthLow": 2250,
+        "monthHigh": 2250
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 35,
+        "insurance_TP": 15,
+        "insurance_3PLC": 40,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Opel Zafira Aut",
+        "carGroup": "U",
+        "seats": 7,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/210t.jpg"
+      },
+      "price": 277.20,
+      "priceCondition": {
+        "dailyLowOneTwo": 39,
+        "dailyHighOneTwo": 69,
+        "dailyLowThreeSix": 39,
+        "dailyHighThreeSix": 69,
+        "weeklyLow": 245,
+        "weeklyHigh": 455,
+        "exDayLow": 35,
+        "exDayHigh": 65,
+        "monthLow": 1220,
+        "monthHigh": 1520
+      },
+      "eKm": 0.75,
+      "excess": 715,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 15,
+        "insurance_TP": 10,
+        "insurance_3PLC": 20,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Mitsubishi Outlander Autt",
+        "carGroup": "V",
+        "seats": 7,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/210t.jpg"
+      },
+      "price": 321.30,
+      "priceCondition": {
+        "dailyLowOneTwo": 58,
+        "dailyHighOneTwo": 88,
+        "dailyLowThreeSix": 58,
+        "dailyHighThreeSix": 88,
+        "weeklyLow": 364,
+        "weeklyHigh": 574,
+        "exDayLow": 52,
+        "exDayHigh": 88,
+        "monthLow": 1550,
+        "monthHigh": 1850
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 15,
+        "insurance_TP": 10,
+        "insurance_3PLC": 20,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Kia Carnival Aut",
+        "carGroup": "V8",
+        "seats": 8,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/225.jpg"
+      },
+      "price": 374.85,
+      "priceCondition": {
+        "dailyLowOneTwo": 83,
+        "dailyHighOneTwo": 113,
+        "dailyLowThreeSix": 83,
+        "dailyHighThreeSix": 113,
+        "weeklyLow": 525,
+        "weeklyHigh": 735,
+        "exDayLow": 75,
+        "exDayHigh": 105,
+        "monthLow": 1870,
+        "monthHigh": 2170
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 35,
+        "insurance_TP": 10,
+        "insurance_3PLC": 40,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "Renault Traffic Man",
+        "carGroup": "Y",
+        "seats": 9,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/250.jpg"
+      },
+      "price": 352.80,
+      "priceCondition": {
+        "dailyLowOneTwo": 55,
+        "dailyHighOneTwo": 85,
+        "dailyLowThreeSix": 55,
+        "dailyHighThreeSix": 85,
+        "weeklyLow": 343,
+        "weeklyHigh": 553,
+        "exDayLow": 49,
+        "exDayHigh": 79,
+        "monthLow": 1600,
+        "monthHigh": 1900
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 35,
+        "insurance_TP": 10,
+        "insurance_3PLC": 40,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    },
+    {
+      "country": "IL",
+      "companyName": "Albar",
+      "vehicle": {
+        "vehicleType": "VW Transporter Aut",
+        "carGroup": "Z",
+        "seats": 9,
+        "baggage": "2 Large suitcases, 3     Small    suitcases",
+        "airCondition": "A/C",
+        "transmisson": "Automat",
+        "doors": 4,
+        "ImageUrl": "src = https://rent.albar.co.il/CarImages/Rent/CarCategories/260t2.jpg"
+      },
+      "price": 560.70,
+      "priceCondition": {
+        "dailyLowOneTwo": 95,
+        "dailyHighOneTwo": 125,
+        "dailyLowThreeSix": 95,
+        "dailyHighThreeSix": 125,
+        "weeklyLow": 602,
+        "weeklyHigh": 812,
+        "exDayLow": 86,
+        "exDayHigh": 116,
+        "monthLow": 2120,
+        "monthHigh": 2420
+      },
+      "eKm": 0.75,
+      "excess": 960,
+      "paymentType": {
+        "prepay": 0,
+        "station": 0
+      },
+      "protection": {
+        "insurance_CDW": 35,
+        "insurance_TP": 10,
+        "insurance_3PLC": 40,
+        "insurance_SuperCDW": 15,
+        "insurance_SuperTP": 10,
+        "insurance_SuperCDWMonth": 210,
+        "insurance_SuperTPMonth": 90
+      }
+    }
+  ]
+}
