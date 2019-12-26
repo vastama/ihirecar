@@ -1,0 +1,505 @@
+{% extends "layout_ru.html" %}
+{% block car_form %}
+<div class="container">
+
+    <form class="well form-horizontal" action="request_car" method="post"  id="contact_form">
+
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">First Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" >Last Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Отделение</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="department" class="form-control selectpicker">
+                            <option value="">Select your Department/Office</option>
+                            <option>Department of Engineering</option>
+                            <option>Department of Agriculture</option>
+                            <option >Accounting Office</option>
+                            <option >Tresurer's Office</option>
+                            <option >MPDC</option>
+                            <option >MCTC</option>
+                            <option >MCR</option>
+                            <option >Mayor's Office</option>
+                            <option >Tourism Office</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Username</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  name="user_name" placeholder="Username" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" ></label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <select name="car"  required = "required" autofocus class="form-control selectpicker">
+                            <option selected disabled value="" >    Выбирайте категорию автомобиля    </option>
+                            {% for i in range(0,24) %}
+                                <option value="Category {{car[i][0]}}" >{{car[i][4]}} или похожая в категории {{car[i][0]}} - от {{car[i][11]}}$ в сутки</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">E-Mail</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Contact No.</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input name="contact_no" placeholder="(639)" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+
+            <!-- Success message -->
+            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4"><br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+</div><!-- /.container -->
+
+
+    <div class="container">
+        <div class="col-md-5 bann-info1 wow fadeInLeft animated" data-wow-delay=".5s">
+            <!--		<i class="fa fa-columns"></i>-->
+            <i> <img src="http://www.rentalcarsisrael.com/images/europcar_W.jpg" alt="машина прокат, машина прокат Израиле, аренда машины Израиль" class="img-responsive" /></i>
+            <h3>БРОНИРОВАНИЕ АВТОМОБИЛЯ В ИЗРАИЛЕ ЗА ОДИН ШАГ</h3>
+
+
+            <br><img src="images/blue_star_20px.png" alt="Аренда прокат всех категорий машин на Майские праздники по цене низкого сезона" width="20" height="20" />Аренда прокат всех категорий машин на Майские праздники по цене низкого сезона
+            <br><img src="images/blue_star_20px.png" alt="Отделения по аренде прокату автомобилей во всех крупных городах Израиля" width="20" height="20" />Отделения по аренде прокату автомобилей во всех крупных городах Израиля
+            <br><img src="images/blue_star_20px.png" alt="Неограниченный километраж при заказе 3-29 дней" width="20" height="20" />Неограниченный километраж при заказе 3-29 дней
+            <br><img src="images/blue_star_20px.png" alt="Огромные скидки при бронирование автомобиля на 30+ дней" width="20" height="20" />Огромные скидки при бронирование автомобиля на 30+ дней
+            <br><img src="images/blue_star_20px.png" alt="Консультация и помощь по бронированию автомобиля в Израиле на русском языке" width="20" height="20" />Консультации и помощь по бронированию автомобиля в Израиле на русском языке.
+
+
+        </div>
+
+
+        <div class="col-md-7 bann-info wow fadeInRight animated" data-wow-delay=".5s">
+            <h1>Заполните форму и получите ваучер на почту</h1>
+            <p style="color:red;" >Нет скрытых платежей, обязательные страховки включены.
+                <br />Нет предоплаты, нет платы за изменение или отмену заказа </p>
+            <br />
+            <form id="contactform" method="post">
+                <div class="ban-top">
+                    <div class="bnr-left">
+                        <label  for="car-select">Выбирайте класс автомобиля</label>
+
+
+                        <select class="form-control" name="car-select" id="car-select" required >
+                            <option value="" >Категории автомобилей</option>
+                            <option value="Category Q" >Fiat 500(два места) или похожая в категории Q - от 24$ в сутки(франшиза - 475$)</option>
+                            <option value="Category B" >Suzuki Alto(механика) или похожая в категории B - от 24$ в сутки(франшиза - 475$)</option>
+                            <option value="Category C" >Kia Picanto(робот) или похожая в категории C - от 25$ в сутки(франшиза - 475$)</option>
+                            <option value="Category D" >Hyundai i20(автомат) или похожая в категории D - от 26$ в сутки(франшиза - 475$)</option>
+                            <option value="Category E" >Ford Fiesta(автомат) или похожая в категории E - от 27$ в сутки(франшиза - 475$)</option>
+                            <option value="Category F" >Hyundai i25(автомат) или похожая в категории F - от 30$ в сутки(франшиза - 475$)</option>
+                            <option value="Category FX" >Renault Megane Coupe(автомат) или похожая в категории FX - от 31$ в сутки(франшиза - 475$)</option>
+                            <option value="Category I" >Mazda 3(автомат) или похожая в категории I - от 32$ сутки(франшиза - 475$)</option>
+                            <option value="Category IW" >Ford Focus SW(автомат) или похожая в категории IW - от 34$ сутки(франшиза - 475$)</option>
+                            <option value="Category H" >Honda Civic(автомат) или похожая в категории H - от 41$ в сутки(франшиза - 715$)</option>
+                            <option value="Category M" >Mazda 6(автомат) или похожая в категории M - от 47$ в сутки(франшиза - 715$)</option>
+                            <option value="Category MH" >Hyundai Sonata(автомат) или похожая в категории MH - от 57$ в сутки(франшиза - 715$)</option>
+                            <option value="Category T" >Fiat Doblo(механика, 5 мест) или похожая в категории T - от 60$ в сутки(франшиза - 475$)</option>
+                            <option value="Category J" >Hyundai Tucson(автомат, 5 мест) или похожая в категории J - от 63$ в сутки(франшиза - 715$)</option>
+                            <option value="Category U" >Opel Zafira(автомат, 7 мест) или похожая в категории U - от 60$ в сутки(франшиза - 715$)</option>
+                            <option value="Category V" >Mitsubishi Outlander(автомат, 7 мест) или похожая в категории V - от 77$ в сутки(франшиза - 960$)</option>
+                            <option value="Category V8" >Kia Carnival(автомат, 8 мест) или похожая в категории V8 - от 120$ в сутки(франшиза - 960$)</option>
+                            <option value="Category Y" >Citroen Jumpy(механика, 9 мест)или похожая в категории Y - от 94$ в сутки(франшиза - 960$)</option>
+                            <option value="Category Z" >Ford Transit(автомат, 9 мест) или похожая в категории Z - от 131$ в сутки(франшиза - 960$)</option>
+                            <option value="Category P" >Nissan Maxima(автомат) или похожая в категории P - от 116$ в сутки(франшиза - 960$)</option>
+                            <option value="Category K" >BMW 318i(автомат) или похожая в категории K - от 84$ в сутки(франшиза - 960$)</option>
+                            <option value="Category W" >Audi A6(автомат) или похожая в категории W - от 155$ в сутки(франшиза - 960$)</option>
+                            <option value="Category O" >Ford Edge(автомат) или похожая в категории O - от 174$ в сутки(франшиза - 960$)</option>
+                        </select>
+                        <br />
+                    </div>
+                    <!-- Car select end -->
+                    <div class="clearfix"></div>
+                    <hr />
+
+                    <div class="bnr-left">
+                        <label for="pickup-location">Аренда</label>
+
+                        <select class="form-control" name="pickup-location" id="pickup-location" required>
+                            <option value="">Отделение</option>
+                            <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
+                            <option value="Тель Авив, ул. ха-Яркон, 80">Тель Авив, ул. ха-Яркон, 80</option>
+                            <option value="Тель Авив, ул. ха-Масгер, 9">Тель Авив, ул. ха-Масгер, 9</option>
+                            <option value="Иерусалим, ул. Кинг Давид, 19">Иерусалим, ул. Кинг Давид, 19</option>
+                            <option value="Хайфа, шдерот ха-Гистадрут, 88">Хайфа, шдерот ха-Гистадрут, 88</option>
+                            <option value="Нетания, ул. Усишкин, 1">Нетания, ул. Усишкин, 1</option>
+                            <option value="Тверия, ул. ха-Ярден, 71">Тверия, ул. ха-Ярден, 71</option>
+                            <option value="Эйлат, ул. Шешет ха-Ямим, 3">Эйлат, ул. Шешет ха-Ямим, 3</option>
+                            <option value="Афула, ул. Менахем Бегин, 70">Афула, ул. Менахем Бегин, 70</option>
+                            <option value="Ашдод, ул. ха-Оргим, 7">Ашдод, ул. ха-Оргим, 7</option>
+                            <option value="Беэр Шева, дерех Хеврон, 129">Беэр Шева, дерех Хеврон, 129</option>
+                            <option value="Бейт Шемеш, ул. Нахалат Зоар, 10">Бейт Шемеш, ул. Нахалат Зоар, 10</option>
+                            <option value="Бней Брак, ул. Каханман, 106">Бней Брак, ул. Каханман, 106</option>
+                            <option value="Бней Брак, ул. Мивца Кадош, 64">Бней Брак, ул. Мивца Кадош, 64</option>
+                            <option value="Герцелия, ул. Аба Евен, 8">Герцелия, ул. Аба Евен, 8</option>
+                            <option value="Холон, ул. ха-Меркава, 73">Холон, ул. ха-Меркава, 73</option>
+                            <option value="Кфар Саба, ул. ха-Таяс, 17">Кфар Саба, ул. ха-Таяс, 17</option>
+                            <option value="Кирьят Шмона, ул. ха-Ярден, 1">Кирьят Шмона, ул. ха-Ярден, 1</option>
+                            <option value="Нес Циона, ул. ха-Патиш, 10">Нес Циона, ул. ха-Патиш, 10</option>
+                            <option value="Петах Тиква, ул. Жаботински, 82">Петах Тиква, ул. Жаботински, 82</option>
+                            <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
+                            <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
+                        </select>
+                        <input name="pickup-date" type="date"  min="2016-10-02" required = "required">
+                        <!-- <input type="time" name="pickup-time" id="pickup-time"  required = "required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'hh:mm';}"> -->
+                        <label for="pickup-time"></label>
+                        <select class="form-control" name="pickup-time" id="pickup-time" required>
+                            <option value="">Время</option>
+                            <option value="00:00">00:00</option>
+                            <option value="00:30">00:30</option>
+                            <option value="01:00">01:00</option>
+                            <option value="01:30">01:30</option>
+                            <option value="02:00">02:00</option>
+                            <option value="02:30">02:30</option>
+                            <option value="03:00">03:00</option>
+                            <option value="03:30">03:30</option>
+                            <option value="04:00">04:00</option>
+                            <option value="04:30">04:30</option>
+                            <option value="05:00">05:00</option>
+                            <option value="05:30">05:30</option>
+                            <option value="06:00">06:00</option>
+                            <option value="06:30">06:30</option>
+                            <option value="07:00">07:00</option>
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                            <option value="22:00">22:00</option>
+                            <option value="22:30">22:30</option>
+                            <option value="23:00">23:00</option>
+                            <option value="23:30">23:30</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="bnr-right">
+                        <label for="dropoff-location">Возврат</label>
+
+                        <select class="form-control" name="dropoff-location" id="dropoff-location" required>
+                            <option value="">Отделение</option>
+                            <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
+                            <option value="Тель Авив, ул. ха-Яркон, 80">Тель Авив, ул. ха-Яркон, 80</option>
+                            <option value="Тель Авив, ул. ха-Масгер, 9">Тель Авив, ул. ха-Масгер, 9</option>
+                            <option value="Иерусалим, ул. Кинг Давид, 19">Иерусалим, ул. Кинг Давид, 19</option>
+                            <option value="Хайфа, шдерот ха-Гистадрут, 88">Хайфа, шдерот ха-Гистадрут, 88</option>
+                            <option value="Нетания, ул. Усишкин, 1">Нетания, ул. Усишкин, 1</option>
+                            <option value="Тверия, ул. ха-Ярден, 71">Тверия, ул. ха-Ярден, 71</option>
+                            <option value="Эйлат, ул. Шешет ха-Ямим, 3">Эйлат, ул. Шешет ха-Ямим, 3</option>
+                            <option value="Афула, ул. Менахем Бегин, 70">Афула, ул. Менахем Бегин, 70</option>
+                            <option value="Ашдод, ул. ха-Оргим, 7">Ашдод, ул. ха-Оргим, 7</option>
+                            <option value="Беэр Шева, дерех Хеврон, 129">Беэр Шева, дерех Хеврон, 129</option>
+                            <option value="Бейт Шемеш, ул. Нахалат Зоар, 10">Бейт Шемеш, ул. Нахалат Зоар, 10</option>
+                            <option value="Бней Брак, ул. Каханман, 106">Бней Брак, ул. Каханман, 106</option>
+                            <option value="Бней Брак, ул. Мивца Кадош, 64">Бней Брак, ул. Мивца Кадош, 64</option>
+                            <option value="Герцелия, ул. Аба Евен, 8">Герцелия, ул. Аба Евен, 8</option>
+                            <option value="Холон, ул. ха-Меркава, 73">Холон, ул. ха-Меркава, 73</option>
+                            <option value="Кфар Саба, ул. ха-Таяс, 17">Кфар Саба, ул. ха-Таяс, 17</option>
+                            <option value="Кирьят Шмона, ул. ха-Ярден, 1">Кирьят Шмона, ул. ха-Ярден, 1</option>
+                            <option value="Нес Циона, ул. ха-Патиш, 10">Нес Циона, ул. ха-Патиш, 10</option>
+                            <option value="Петах Тиква, ул. Жаботински, 82">Петах Тиква, ул. Жаботински, 82</option>
+                            <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
+                            <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
+                        </select>
+                        <input name="dropoff-date" type="date"  min="2016-10-02" required = "required">
+
+
+
+                        <!--  <input type="time" name="dropoff-time" id="dropoff-time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'hh:mm';}" required = "required"> -->
+                        <!--  <label for="dropoff-location">Возврат</label> -->
+                        <label for="dropoff-time"></label>
+                        <select class="form-control" name="dropoff-time" id="dropoff-time" required>
+                            <option value="">Время</option>
+                            <option value="00:00">00:00</option>
+                            <option value="00:30">00:30</option>
+                            <option value="01:00">01:00</option>
+                            <option value="01:30">01:30</option>
+                            <option value="02:00">02:00</option>
+                            <option value="02:30">02:30</option>
+                            <option value="03:00">03:00</option>
+                            <option value="03:30">03:30</option>
+                            <option value="04:00">04:00</option>
+                            <option value="04:30">04:30</option>
+                            <option value="05:00">05:00</option>
+                            <option value="05:30">05:30</option>
+                            <option value="06:00">06:00</option>
+                            <option value="06:30">06:30</option>
+                            <option value="07:00">07:00</option>
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                            <option value="22:00">22:00</option>
+                            <option value="22:30">22:30</option>
+                            <option value="23:00">23:00</option>
+                            <option value="23:30">23:30</option>
+                        </select>
+
+
+                    </div>
+                    <!--				<div class="clearfix"></div>-->
+                </div>
+                <div class="ban-bottom">
+
+                    <div class="clearfix"></div>
+
+
+                    <hr />
+                    <!--Имя <input type="text" name="First_name" placeholder="на английском" required = "required">
+                    Фамилия <input type="text" name="Last_name" placeholder="на английском" required = "required"> <br />
+                    Почта <input type="email" name="email" placeholder="на нее придет ваучер" required = "required">
+                    Телефон <input type="text" name="phone" placeholder="включая код страны" required = "required"> <br /> -->
+
+
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" name="First_name" required class="form-control autocomplete-location" placeholder="Имя на английском(как в правах)">
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" name="Last_name" required class="form-control autocomplete-location" placeholder="Фамилия на английском(как в правах)">
+                        </div>
+                    </div>
+
+
+
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required id="email" class="form-control autocomplete-location" placeholder="Ваша почта">
+                        </div>
+                    </div>
+
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+                            <input type="text" name="phone" required class="form-control autocomplete-location" placeholder="Ваш телефон-whatsapp-viber включая код страны" >
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="location">
+                      <div class="input-group pick-up">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
+                        <input type="number" name="DriverExperience" min="1" max="50" class="form-control autocomplete-location" placeholder="Стаж вождения от 1 года">
+                      </div>
+                    </div> -->
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-exclamation-sign"></span></span>
+                            <input type="text" name="message" class="form-control autocomplete-location" placeholder="Дополнительная информация, вопрос...">
+                        </div>
+                    </div>
+
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-ok-sign"></span></span> -->
+                            Возраст водителя
+                            <!-- <input type="number" name="age" min="21" max="70" class="form-control autocomplete-location" placeholder="Возраст водителя от 21 года"> -->
+                            <label class="radio-inline"><input type="radio" name="age" value="21-22">21-22</label>
+                            <label class="radio-inline"><input type="radio" name="age" value="23+">23+</label>
+                            <label class="radio-inline"><input type="radio" name="age" value="25+">25+</label>
+                            <label class="radio-inline"><input type="radio" name="age" value="28+">28+</label>
+                        </div>
+                    </div>
+
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-ok-sign"></span></span> -->
+                            Стаж вождения
+                            <!-- <input type="number" name="age" min="21" max="70" class="form-control autocomplete-location" placeholder="Возраст водителя от 21 года"> -->
+                            <label class="radio-inline"><input type="radio" name="DriverExperience" value="1-2">1-2</label>
+                            <label class="radio-inline"><input type="radio" name="DriverExperience" value="3+">3+</label>
+                        </div>
+                    </div>
+
+
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="SuperCDW" value="V">Отмена личного участия при повреждении машины</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="SuperTP" value="V">Отмена личного участия при угоне машины</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="addDriver" value="V">Дополнительный водитель</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="childseat" value="V">Детское сидение</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="tour" value="V">Хочу узнать о индивидуальных экскурсиях по Израилю</label>
+                    </div>
+
+                    <!--  <div class="g-recaptcha" data-sitekey="6LcVRQgUAAAAALqre7PqN_m3eNet_RK1XrRoj6Hz"></div> -->
+
+
+
+
+
+
+                    <!--  Возраст водителя <input type="number" name="age" min="21" max="70" placeholder="от 21" required = "required">  -->
+                    <!--  Стаж вождения <input type="number" name="DriverExperience" min="1" max="70" placeholder="" required = "required">  -->
+
+                </div>
+
+                <!--  <hr />
+             <input type="checkbox" name="SuperCDW" value="V"> Добавить отмену личного участия при повреждении машины<br>
+             <input type="checkbox" name="SuperTP" value="V"> Добавить отмену личного участия при угоне машины<br> -->
+
+                <!-- <input type="checkbox" name="childseat" value="V"> Детское сидение 5$ в день(максимум 50$)<br>
+                <input type="checkbox" name="GPS" value="V"> Навигатор 10$ в день(максимум 75$)<br> -->
+                <!--                        <input type="checkbox" name="youngDriver" value="youngDriver"> Молодой водитель, менее года<br>->
+                                        <input type="checkbox" name="addDriver" value="V"> Дополнительный водитель 2$ в день (бесплатно при заказе 7+ дней)<br>
+                                        <input type="checkbox" name="RoadSafe" value="V"> Быстрая помощь на дороге 4$ в день(максимум 100$)<br>
+                                        <input type="checkbox" name="Religious" value="V"> Я соблюдаю шабат. Расчет по прейскуранту для верующих <br> -->
+                <!--                        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+                                        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>-->
+                <!-- <textarea name="message" placeholder="Дополнительная информация, вопрос..."></textarea> <br /> -->
+                <!--
+                                        <div class="g-recaptcha" data-sitekey="6LcVRQgUAAAAALqre7PqN_m3eNet_RK1XrRoj6Hz"></div>-->
+                <br />
+                <input type="submit" name="submit" value="ЗАКАЗАТЬ"> или <img src="images/whatsapp.png" height="20" width="20" alt="Whatsapp"/><a href="https://wa.me/972587710101?text=Я%20заинтересован%20в%20аренде%20авто%20в%20Израиле"/> +972-58-771-0101</a>
+
+
+
+            </form>
+
+            <h5>добавить индивидуальную экскурсию по Израилю с частным гидом</span></a></h5>
+
+
+        </div>
+
+{% endblock %}

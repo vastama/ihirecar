@@ -5,31 +5,170 @@
     <form action="request_car" method="POST">
         <select name="car" id="car" required = "required" autofocus>
             <option selected disabled value="" >Выбирайте категорию автомобиля</option>
-            <option value="Category Q" >Smart Fortwo или похожая в категории Q - от 9$ в сутки</option>
-            <option value="Category B" >Suzuki Alto или похожая в категории B - от 9$ в сутки</option>
-            <option value="Category C" >Toyota Aygo или похожая в категории C - от 10$ в сутки</option>
-            <option value="Category D" >Hyundai i20 или похожая в категории D - от 11$ в сутки</option>
-            <option value="Category E" >Ford Fiesta или похожая в категории E - от 12$ в сутки</option>
-            <option value="Category F" >Kia Forte или похожая в категории F - от 14$ в сутки</option>
-            <option value="Category I" >Mazda 3 или похожая в категории I - от 16$ в сутки</option>
-            <option value="Category H" >Honda Civic или похожая в категории H - от 22$ в сутки</option>
-            <option value="Category M" >Mazda 6 или похожая в категории M - от 28$ в сутки</option>
-            <option value="Category MH" >Honda Accord Hybrid или похожая в категории MH - от 38$ в сутки</option>
-            <option value="Category T" >Fiat Doblo(ручник, 5 мест) или похожая в категории T - от 35$ в сутки</option>
-            <option value="Category J" >Nissan Qashqai(автомат, 5 мест) или похожая в категории J - от 38$ в сутки</option>
-            <option value="Category U" >Mazda 5(автомат, 7 мест) или похожая в категории U - от 35$ в сутки</option>
-            <option value="Category V" >Ford Galaxy V(автомат, 7 мест) или похожая в категории V - от 52$ в сутки</option>
-            <option value="Category S" >Hyundai i800(ручник, 8 мест) или похожая в категории S - от 59$ в сутки</option>
-            <option value="Category V8" >Toyota Sienna(автомат, 8 мест) или похожая в категории V8 - от 75$ в сутки</option>
-            <option value="Category Y" >Citroen Jumpy(ручник, 9 мест)или похожая в категории Y - от 49$ в сутки </option>
-            <option value="Category Z" >Hyundai i800(автомат, 9 мест) или похожая в категории Z - от 95$ в сутки</option>
-            <option value="Category R" >Chevrolet Malibu или похожая в категории R - от 52$ в сутки</option>
-            <option value="Category P" >Buick LaCrosse или похожая в категории P - от 71$ в сутки</option>
-            <option value="Category K" >BMW 318i или похожая в категории K - от 72$ в сутки</option>
-            <option value="Category W" >BMW i535 или похожая в категории W - от 110$ в сутки</option>
-            <option value="Category O" >Toyota Highlander(автомат) или похожая в категории O - от 149$ в сутки</option>
+            {% for i in range(0,24) %}
+            <option value="Category {{car[i][0]}}" >{{car[i][4]}} или похожая в категории {{car[i][0]}} - от {{car[i][11]}}$ в сутки</option>
+            {% endfor %}
+
         </select>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+<br>
+        <label for="pickup-location">Аренда</label>
+        <i class="fas fa-car-side"></i>
+        <select class="form-control" name="pickup-location" id="pickup-location" required>
+            <option value="">Отделение</option>
+            <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
+            <option value="Тель Авив, ул. ха-Яркон, 80">Тель Авив, ул. ха-Яркон, 80</option>
+            <option value="Тель Авив, ул. ха-Масгер, 9">Тель Авив, ул. ха-Масгер, 9</option>
+            <option value="Иерусалим, ул. Кинг Давид, 19">Иерусалим, ул. Кинг Давид, 19</option>
+            <option value="Хайфа, шдерот ха-Гистадрут, 88">Хайфа, шдерот ха-Гистадрут, 88</option>
+            <option value="Нетания, ул. Усишкин, 1">Нетания, ул. Усишкин, 1</option>
+            <option value="Тверия, ул. ха-Ярден, 71">Тверия, ул. ха-Ярден, 71</option>
+            <option value="Эйлат, ул. Шешет ха-Ямим, 3">Эйлат, ул. Шешет ха-Ямим, 3</option>
+            <option value="Афула, ул. Менахем Бегин, 70">Афула, ул. Менахем Бегин, 70</option>
+            <option value="Ашдод, ул. ха-Оргим, 7">Ашдод, ул. ха-Оргим, 7</option>
+            <option value="Беэр Шева, дерех Хеврон, 129">Беэр Шева, дерех Хеврон, 129</option>
+            <option value="Бейт Шемеш, ул. Нахалат Зоар, 10">Бейт Шемеш, ул. Нахалат Зоар, 10</option>
+            <option value="Бней Брак, ул. Каханман, 106">Бней Брак, ул. Каханман, 106</option>
+            <option value="Бней Брак, ул. Мивца Кадош, 64">Бней Брак, ул. Мивца Кадош, 64</option>
+            <option value="Герцелия, ул. Аба Евен, 8">Герцелия, ул. Аба Евен, 8</option>
+            <option value="Холон, ул. ха-Меркава, 73">Холон, ул. ха-Меркава, 73</option>
+            <option value="Кфар Саба, ул. ха-Таяс, 17">Кфар Саба, ул. ха-Таяс, 17</option>
+            <option value="Кирьят Шмона, ул. ха-Ярден, 1">Кирьят Шмона, ул. ха-Ярден, 1</option>
+            <option value="Нес Циона, ул. ха-Патиш, 10">Нес Циона, ул. ха-Патиш, 10</option>
+            <option value="Петах Тиква, ул. Жаботински, 82">Петах Тиква, ул. Жаботински, 82</option>
+            <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
+            <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
+        </select>
+        <input class="datepicker" name="date_rent"  data-date-format="mm/dd/yyyy" placeholder="Start Rent mm/dd/yyyy">
+        <input type="time" name="time_rent">
+    <br>
+        <label for="dropoff-location">Возврат</label>
+
+        <select class="form-control" name="dropoff-location" id="dropoff-location" required>
+            <option value="">Отделение</option>
+            <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
+            <option value="Тель Авив, ул. ха-Яркон, 80">Тель Авив, ул. ха-Яркон, 80</option>
+            <option value="Тель Авив, ул. ха-Масгер, 9">Тель Авив, ул. ха-Масгер, 9</option>
+            <option value="Иерусалим, ул. Кинг Давид, 19">Иерусалим, ул. Кинг Давид, 19</option>
+            <option value="Хайфа, шдерот ха-Гистадрут, 88">Хайфа, шдерот ха-Гистадрут, 88</option>
+            <option value="Нетания, ул. Усишкин, 1">Нетания, ул. Усишкин, 1</option>
+            <option value="Тверия, ул. ха-Ярден, 71">Тверия, ул. ха-Ярден, 71</option>
+            <option value="Эйлат, ул. Шешет ха-Ямим, 3">Эйлат, ул. Шешет ха-Ямим, 3</option>
+            <option value="Афула, ул. Менахем Бегин, 70">Афула, ул. Менахем Бегин, 70</option>
+            <option value="Ашдод, ул. ха-Оргим, 7">Ашдод, ул. ха-Оргим, 7</option>
+            <option value="Беэр Шева, дерех Хеврон, 129">Беэр Шева, дерех Хеврон, 129</option>
+            <option value="Бейт Шемеш, ул. Нахалат Зоар, 10">Бейт Шемеш, ул. Нахалат Зоар, 10</option>
+            <option value="Бней Брак, ул. Каханман, 106">Бней Брак, ул. Каханман, 106</option>
+            <option value="Бней Брак, ул. Мивца Кадош, 64">Бней Брак, ул. Мивца Кадош, 64</option>
+            <option value="Герцелия, ул. Аба Евен, 8">Герцелия, ул. Аба Евен, 8</option>
+            <option value="Холон, ул. ха-Меркава, 73">Холон, ул. ха-Меркава, 73</option>
+            <option value="Кфар Саба, ул. ха-Таяс, 17">Кфар Саба, ул. ха-Таяс, 17</option>
+            <option value="Кирьят Шмона, ул. ха-Ярден, 1">Кирьят Шмона, ул. ха-Ярден, 1</option>
+            <option value="Нес Циона, ул. ха-Патиш, 10">Нес Циона, ул. ха-Патиш, 10</option>
+            <option value="Петах Тиква, ул. Жаботински, 82">Петах Тиква, ул. Жаботински, 82</option>
+            <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
+            <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
+        </select>
+        <input class="datepicker" name="date_return"  data-date-format="mm/dd/yyyy" placeholder="Return car mm/dd/yyyy">
+        <input type="time" name="time_return">
+    <br>
+        <div class="input-group pick-up">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" name="First_name" required class="form-control autocomplete-location" placeholder="Имя на английском(как в правах)">
+        </div>
+        </div>
+        <div class="location">
+            <div class="input-group pick-up">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" name="Last_name" required class="form-control autocomplete-location" placeholder="Фамилия на английском(как в правах)">
+            </div>
+        </div>
+
+
+
+        <div class="location">
+            <div class="input-group pick-up">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required id="email" class="form-control autocomplete-location" placeholder="Ваша почта">
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="input-group pick-up">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+                <input type="text" name="phone" required class="form-control autocomplete-location" placeholder="Ваш телефон-whatsapp-viber включая код страны" >
+            </div>
+        </div>
+
+
+
+        <!-- <div class="location">
+          <div class="input-group pick-up">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
+            <input type="number" name="DriverExperience" min="1" max="50" class="form-control autocomplete-location" placeholder="Стаж вождения от 1 года">
+          </div>
+        </div> -->
+        <div class="location">
+            <div class="input-group pick-up">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-exclamation-sign"></span></span>
+                <input type="text" name="message" class="form-control autocomplete-location" placeholder="Дополнительная информация, вопрос...">
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="input-group pick-up">
+                <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-ok-sign"></span></span> -->
+                Возраст водителя
+                <!-- <input type="number" name="age" min="21" max="70" class="form-control autocomplete-location" placeholder="Возраст водителя от 21 года"> -->
+                <label class="radio-inline"><input type="radio" name="age" value="21-22">21-22</label>
+                <label class="radio-inline"><input type="radio" name="age" value="23+">23+</label>
+                <label class="radio-inline"><input type="radio" name="age" value="25+">25+</label>
+                <label class="radio-inline"><input type="radio" name="age" value="28+">28+</label>
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="input-group pick-up">
+                <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-ok-sign"></span></span> -->
+                Стаж вождения
+                <!-- <input type="number" name="age" min="21" max="70" class="form-control autocomplete-location" placeholder="Возраст водителя от 21 года"> -->
+                <label class="radio-inline"><input type="radio" name="DriverExperience" value="1-2">1-2</label>
+                <label class="radio-inline"><input type="radio" name="DriverExperience" value="3+">3+</label>
+            </div>
+        </div>
+
+
+        <div class="checkbox">
+            <label><input type="checkbox" name="SuperCDW" value="V">Отмена личного участия при повреждении машины</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="SuperTP" value="V">Отмена личного участия при угоне машины</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="addDriver" value="V">Дополнительный водитель</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="childseat" value="V">Детское сидение</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="tour" value="V">Хочу узнать о индивидуальных экскурсиях по Израилю</label>
+        </div>
         <input type="submit" value="ОТПРАВИТЬ" >
 
     </form>
+
+    {% for i in range(0,24) %}
+        {% for j in range(0,24) %}
+              {{car[i][j]}}
+        {% endfor %}
+        <br>
+    {% endfor %}
+
+
+
+
 {% endblock %}
