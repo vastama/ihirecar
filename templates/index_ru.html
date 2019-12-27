@@ -1,23 +1,59 @@
 {% extends "layout_ru.html" %}
 {% block content %}
-    <h1>{{ title }}</h1>
-    <p>Index page ru</p>
+    <div class="container">
+        <div class="alert alert-primary" role="alert">
+    <h1 class="text-center">{{ title }}</h1>
+            <h3 class="text-center"> +972-58-7710101</h3>
+        </div>
+
+
+        <div class="media">
+            <img src="../static/img/europcar_Z.jpg" class="align-self-center mr-3" alt="...">
+            <div class="media-body alert alert-light" role="alert">
+                <h5 class="mt-0">Заполните форму и наш сотрудник свяжется с вами.
+                    Консультация на русском языке бесплатна и без обязательств</h5>
+                <br><img style="float:left" class="img-responsive" src="../static/img/checkmark.png" alt="Консультация и помощь по бронированию автомобиля в Израиле на русском языке" width="20" height="20" />
+                <strong>Бронирование автомобиля в Израиле</strong> по лучшей онлайн цене	(<strong style="color:red;">до 40% экономии</strong> при сравнении с заказом в отделении компании)
+
+                <br><img style="float:left" class="img-responsive" src="../static/img/checkmark.png"
+                         alt="НЕТ предоплаты, оплата только при возвращении машины, возможно наличным" width="20" height="20" />
+                <strong style="color:red;">НЕТ предоплаты </strong>, оплата при возвращении машины, можно наличными.
+
+
+                <br><img style="float:left" src="../static/img/checkmark.png" width="20" height="20" alt="Индивидуальные экскурсии по Израилю с частным гидом" class="img-responsive"/>
+                <strong>Индивидуальные экскурсии по Израилю</strong> с частным гидом на арендованной машине -
+                <strong style="color:red;">до 50% экономии </strong>(согласование экскурсии и оплата напрямую гиду,  <strong style="color:red;">без посредников</strong>)
+
+                <br><img style="float:left" src="../static/img/checkmark.png" alt="Отделения по аренде прокату автомобилей во всех крупных городах Израиля" width="20" height="20" />
+                <strong>Отделения по аренде прокату</strong> автомобилей <strong>во всех крупных городах Израиля</strong>
+                <br><img style="float:left" class="img-responsive" src="../static/img/checkmark.png" alt="Неограниченный километраж при заказе 3-29 дней" width="20" height="20" />
+                <strong>Неограниченный километраж</strong> при заказе 3-29 дней
+                <br><img style="float:left" class="img-responsive" src="../static/img/checkmark.png" alt="Огромные скидки при бронирование автомобиля на 30+ дней" width="20" height="20" />
+                <strong>Огромные скидки</strong> при бронировании автомобиля на 30+ дней
+                <br><img style="float:left" class="img-responsive" src="../static/img/checkmark.png"
+                         alt="Консультация и помощь по бронированию автомобиля в Израиле на русском языке" width="20" height="20" />
+                <strong>Бесплатная консультация и помощь по бронированию автомобиля в Израиле на русском языке</strong>.<img src="../static/img/whatsapp.png" height="20" width="20" alt="Whatsapp"/><a href="https://wa.me/972587710101?text=Я%20заинтересован%20в%20аренде%20авто%20в%20Израиле"/> +972-58-771-0101</a>
+            </div>
+        </div>
+
+
+
+
+
+    <hr/>
+
+
     <form action="request_car" method="POST">
         <select name="car" id="car" required = "required" autofocus>
             <option selected disabled value="" >Выбирайте категорию автомобиля</option>
             {% for i in range(0,24) %}
             <option value="Category {{car[i][0]}}" >{{car[i][4]}} или похожая в категории {{car[i][0]}} - от {{car[i][11]}}$ в сутки</option>
             {% endfor %}
-
         </select>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-<br>
+
+        <hr />
+
         <label for="pickup-location">Аренда</label>
-        <i class="fas fa-car-side"></i>
         <select class="form-control" name="pickup-location" id="pickup-location" required>
             <option value="">Отделение</option>
             <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
@@ -43,9 +79,9 @@
             <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
             <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
         </select>
-        <input class="datepicker" name="date_rent"  data-date-format="mm/dd/yyyy" placeholder="Start Rent mm/dd/yyyy">
+        <input class="datepicker" name="date_rent"  data-date-format="mm/dd/yyyy" placeholder="Аренда mm/dd/yyyy">
         <input type="time" name="time_rent">
-    <br>
+    <hr />
         <label for="dropoff-location">Возврат</label>
 
         <select class="form-control" name="dropoff-location" id="dropoff-location" required>
@@ -73,14 +109,15 @@
             <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
             <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
         </select>
-        <input class="datepicker" name="date_return"  data-date-format="mm/dd/yyyy" placeholder="Return car mm/dd/yyyy">
+        <input class="datepicker" name="date_return"  data-date-format="mm/dd/yyyy" placeholder="Возврат mm/dd/yyyy">
         <input type="time" name="time_return">
-    <br>
+    <hr />
         <div class="input-group pick-up">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
             <input type="text" name="First_name" required class="form-control autocomplete-location" placeholder="Имя на английском(как в правах)">
         </div>
-        </div>
+
+
         <div class="location">
             <div class="input-group pick-up">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
@@ -119,7 +156,7 @@
             </div>
         </div>
 
-        <div class="location">
+
             <div class="input-group pick-up">
                 <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-ok-sign"></span></span> -->
                 Возраст водителя
@@ -129,9 +166,9 @@
                 <label class="radio-inline"><input type="radio" name="age" value="25+">25+</label>
                 <label class="radio-inline"><input type="radio" name="age" value="28+">28+</label>
             </div>
-        </div>
 
-        <div class="location">
+
+        <div class="custom-radio">
             <div class="input-group pick-up">
                 <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-ok-sign"></span></span> -->
                 Стаж вождения
@@ -161,14 +198,39 @@
 
     </form>
 
-    {% for i in range(0,24) %}
-        {% for j in range(0,24) %}
-              {{car[i][j]}}
-        {% endfor %}
-        <br>
+    <hr />
+
+
+
+
+{% for i in range(0,24) %}
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../static/img/Albar/{{car[i][0]}}.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Category {{car[i][0]}}</h5>
+                        <p class="card-text">{{car[i][4]}} или похожая в категории</p>
+                        <p class="card-text"><small class="text-muted">от {{car[i][11]}}$ в сутки</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     {% endfor %}
 
 
-
-
+    <hr />
+    ** Указанные цены соответствуют прейскуранту дилера компаний EuropCar для низкого сезона и значительно отличаются от расценок на сайте\отделении поставщика
+    <br>* Указанные цены НЕ ВКЛЮЧАЮТ обязательные страховки
+    <br>* Указанные цены не включают НДС(от НДС освобождены только туристы имеющие в пасторте визу В2\В3 - обязательно предоставить при получении машины)
+    <br>Часы работы отделений - Аэропорт Бен Гурион 24\7, остальные отделения 8-18, пятница 8-13
+    <br>Модели автомобилей представлены исключительно для примера и при выдаче компания имеет право предоставить автомобиль того же класса, но другой марки.
+    </div>
 {% endblock %}

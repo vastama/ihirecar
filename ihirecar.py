@@ -59,8 +59,14 @@ branches_albar = json.dumps('branches_Albar.json')
 
 @app.route('/ru/')
 def index():
-    name = "Oleg"
-    return render_template('index_ru.html', name=name, title=title, car = a)
+
+    return render_template('index_ru.html', title=title, car = a)
+
+
+
+
+
+
 
 
 @app.route('/ru/about-rent-car-israel')
@@ -72,15 +78,27 @@ def about():
 def request_car():
     title = "Спасибо за обращение к нам"
     car = request.form.get("car")
+    First_name = request.form.get("First_name")
+    Last_name = request.form.get("Last_name")
+    phone = request.form.get("phone")
+    message = request.form.get("message")
     date_rent = request.form.get("date_rent")
     date_return = request.form.get("date_return")
-    MAIL_RECIPIENT = request.form.get("email")
-    subject = '{} rent from {} till {}'.format(car, date_rent, date_return)
-    body = '{} rent from {} till {}'.format(car, MAIL_RECIPIENT, date_rent, date_return)
+    email = request.form.get("email")
+    DriverExperience = request.form.get("email")
+    age = request.form.get("email")
+    SuperCDW = request.form.get("SuperCDW")
+    SuperTP = request.form.get("SuperTP")
+    childseat = request.form.get("childseat")
+    addDriver = request.form.get("addDriver")
+    tour = request.form.get("tour")
+    subject = '{} rent from {} till {} {} {}'.format(car, date_rent, date_return, First_name, Last_name )
+    body = 'Запрос на аренду категория {} от {} {} {} <br> c {} до {} <br> Тел - {} <br> {} <br> SuperCDW {}, SuperTP {}, age {}, DriverExperience {}, addDriver {}, childseat {}, tour {}'\
+        .format(car, First_name, Last_name, email, date_rent, date_return, phone, message, SuperCDW, SuperTP, age, DriverExperience, addDriver, childseat, tour)
     msg = Message(subject=subject,
         sender=app.config.get("MAIL_USERNAME"),
-        recipients=[MAIL_RECIPIENT],
-        body=car)
+        recipients=[email],
+        body=body)
     mail.send(msg)
     return render_template('success-send-email-ru.html', title=title, car=car)
 
