@@ -20,13 +20,33 @@
 
     <!-- Custom styles for this template -->
     <link href="../static/css/agency.min.css" rel="stylesheet">
-    <link href="../static/css/columns.css" rel="stylesheet">
+
 
 
 </head>
 <body>
-{% block content %}{% endblock %}
-{% block car_form %}{% endblock %}
+<div class="container">
+    {% block content_header %}{% endblock %}
+    <div class="row">
+        <div class="col">
+            {% block content_right %}{% endblock %}
+        </div>
+        <div class="col">
+            {% block content_left %}{% endblock %}
+        </div>
+    </div>
+<hr />
+    <div class="row">
+        <div class="col">
+            {% block content_form %}{% endblock %}
+        </div>
+        <div class="col">
+            {% block content_cars %}{% endblock %}
+        </div>
+    </div>
+    {% block content_declamer %}{% endblock %}
+
+</div>
 
 
 
