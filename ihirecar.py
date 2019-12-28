@@ -1,4 +1,4 @@
-from flask import Flask, render_template, json, request
+from flask import Flask, render_template, json, request, redirect
 from flask_mail import Mail, Message
 import os
 
@@ -54,19 +54,15 @@ a = [
 
 branches_albar = json.dumps('branches_Albar.json')
 
+@app.route('/')
+def index_main():
+    return redirect("https://www.ihirecar.com/ru", code=301)
 
 # Russian site
 
 @app.route('/ru/')
 def index():
-
     return render_template('index_ru.html', title=title, car = a)
-
-
-
-
-
-
 
 
 @app.route('/ru/about-rent-car-israel')
