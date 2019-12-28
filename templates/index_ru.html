@@ -50,8 +50,10 @@
 
 
     <form action="request_car" method="POST">
-        <select class="" name="car" id="car" required autofocus>
-            <option selected disabled value="" >Выбирайте категорию автомобиля</option>
+
+        <label for="car">Автомобиль</label>
+        <select class="" name="car" id="car" required>
+            <option value="">Выбирайте категорию автомобиля</option>
             {% for i in range(0,24) %}
             <option value="Category {{car[i][0]}}" >{{car[i][4]}} или похожая в категории {{car[i][0]}} - от {{car[i][11]}}$ в сутки</option>
             {% endfor %}

@@ -108,6 +108,9 @@ def request_car():
 @app.route('/sitemap')
 def sitemap(): return render_template('sitemap.xml')
 
+@app.route('/robot.txt')
+def robot(): return render_template('robot.txt')
+
 @app.route('/ru/minivan-rent-car-israel')
 def minivan(): return render_template('base.html', len=len(Albar_Categories), Albar_Categories=Albar_Categories)
 
