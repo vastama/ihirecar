@@ -54,13 +54,9 @@ a = [
 
 branches_albar = json.dumps('branches_Albar.json')
 
-@app.route('/')
-def index_main():
-    return redirect("https://www.ihirecar.com/ru", code=301)
-
 # Russian site
 
-@app.route('/ru/')
+@app.route('/')
 def index():
     return render_template('index_ru.html', title=title, car = a)
 
@@ -90,14 +86,14 @@ def request_car():
     tour = request.form.get("tour")
 
     subject = '{} rent from {} till {} {} {}'.format(car, date_rent, date_return, First_name, Last_name )
-    body = 'Запрос на аренду категория {} от {} {} {} <br> c {} до {} <br> Тел - {} <br> {} <br> SuperCDW {}, SuperTP {}, age {}, DriverExperience {}, addDriver {}, childseat {}, tour {}'\
+    body = 'Запрос на аренду категория {} от {} {} email: {}  c {} до {}  Тел - {};  Сообщение:  {};  SuperCDW - {}; SuperTP - {}; Возраст водителя - {}; Опыт вождения - {}; Доп.Водитель - {}; Детское сидение - {}; Заинтересован в экскурсии - {}'\
         .format(car, First_name, Last_name, email, date_rent, date_return, phone, message, SuperCDW, SuperTP, age, DriverExperience, addDriver, childseat, tour)
     msg = Message(subject=subject,
         sender=app.config.get("MAIL_USERNAME"),
         recipients=[email],
         body=body)
     mail.send(msg)
-    return render_template('success-send-email-ru.html', title=title, car=car)
+    return render_template('success-send-email-ru.html', title=title)
 
 
 

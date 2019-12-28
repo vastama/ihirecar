@@ -45,14 +45,20 @@
         </div>
     </div>
     {% block content_declamer %}{% endblock %}
-<hr />
-    <a href="https://webmaster.yandex.ru/siteinfo/?site=www.ihirecar.com"><img width="88" height="31" alt="" border="0" src="https://yandex.ru/cycounter?www.ihirecar.com&theme=light&lang=ru"/></a>
+
 
 </div>
 
 
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
 
+<hr />
 
+<div class="container">
+<a href="https://webmaster.yandex.ru/siteinfo/?site=www.ihirecar.com"><img width="88" height="31" alt="" border="0" src="https://yandex.ru/cycounter?www.ihirecar.com&theme=light&lang=ru"/></a>
+</div>
 <!-- Bootstrap core JavaScript -->
 <script src="../static/vendor/jquery/jquery.min.js"></script>
 <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
