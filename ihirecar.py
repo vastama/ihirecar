@@ -81,13 +81,14 @@ def request_car():
     date_rent = request.form.get("date_rent")
     date_return = request.form.get("date_return")
     email = request.form.get("email")
-    DriverExperience = request.form.get("email")
-    age = request.form.get("email")
+    DriverExperience = request.form.get("DriverExperience")
+    age = request.form.get("age")
     SuperCDW = request.form.get("SuperCDW")
     SuperTP = request.form.get("SuperTP")
     childseat = request.form.get("childseat")
     addDriver = request.form.get("addDriver")
     tour = request.form.get("tour")
+
     subject = '{} rent from {} till {} {} {}'.format(car, date_rent, date_return, First_name, Last_name )
     body = 'Запрос на аренду категория {} от {} {} {} <br> c {} до {} <br> Тел - {} <br> {} <br> SuperCDW {}, SuperTP {}, age {}, DriverExperience {}, addDriver {}, childseat {}, tour {}'\
         .format(car, First_name, Last_name, email, date_rent, date_return, phone, message, SuperCDW, SuperTP, age, DriverExperience, addDriver, childseat, tour)
