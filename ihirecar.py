@@ -17,6 +17,7 @@ app.config.update(mail_settings)
 mail = Mail(app)
 
 title = "Недорогая прокат аренда автомобиля в Израиле | iHireCar.com"
+title_ru = "Недорогая прокат аренда автомобиля в Израиле | iHireCar.com"
 description = "iHireCar.com Недорогая прокат аренда автомобиля в Израиле, бронирование онлайн, нет предоплаты, безлимитный километраж, нет скрытых платежей, говорим по русски, отделения в Бен Гурион, Тель Авив, Хайфа, Эйлат, Нетания, Ашдод, эконом семейные и люкс автомобили, минивэны"
 insurance_text_ru_CDW = """Дополнительная страховка (Super CDW) <br/>не обязательная и снижает ответственность арендатора до Нуля в случае ущерба автомобилю (т.е отменяет франшизу).
 Приобрести данный вид страхования возможно только в дополнение к базовому полису(CDW/LDW & TP).
@@ -160,6 +161,10 @@ def robot(): return render_template('robot.txt')
 @app.route('/')
 def index():
     return render_template('index_ru.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,description=description)
+
+@app.route('/ru/')
+def index_ru():
+    return render_template('index_ru.html', title=title_ru, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,description=description)
 
 
 @app.route('/ru/request_car', methods=["POST"])
