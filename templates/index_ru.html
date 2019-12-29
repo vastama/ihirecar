@@ -61,8 +61,8 @@
         <label for="car">Автомобиль</label>
         <select class="" name="car" id="car" required>
             <option value="">Выбирайте категорию автомобиля</option>
-            {% for i in range(0,24) %}
-            <option value="Category {{car[i][0]}}" >{{car[i][4]}} или похожая в категории {{car[i][0]}} - от {{car[i][11]}}$ в сутки</option>
+            {% for i in range(1,25) %}
+            <option value="Category {{Albar_my_low_price[i][2]}}">{{Albar_my_low_price[i][3]}} мест {{Albar_my_low_price[i][7]}} - от {{Albar_my_low_price[i][18]}}$ в сутки</option>
             {% endfor %}
         </select>
 
@@ -169,20 +169,20 @@
 
 {% block content_cars %}
 
-{% for i in range(0,24) %}
-    {% if car[i][3] !=  0  %}
+{% for i in range(1,25) %}
+    {% if Albar_my_low_price[i][3] !=  0  %}
 
 
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="../static/img/Albar/{{car[i][0]}}.jpg" class="card-img" alt="...">
+                    <img src="{{Albar_my_low_price[i][6]}}" class="card-img" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Category {{car[i][0]}}</h5>
-                        <p class="card-text">{{car[i][4]}} или похожая в категории</p>
-                        <p class="card-text"><small class="text-muted">от {{car[i][11]}}$ в сутки</small></p>
+                        <h5 class="card-title">{{Albar_my_low_price[i][3]}}</h5>
+                        <p class="card-text">в категории {{Albar_my_low_price[i][2]}} <br>Мест - {{Albar_my_low_price[i][7]}} <br>Мал.сумок - {{Albar_my_low_price[i][8]}} <br>Бол.сумок - {{Albar_my_low_price[i][9]}} <br>Цена за доп километр - {{Albar_my_low_price[i][16]}} <br>Момeнт. подтверждение - {{Albar_my_low_price[i][22]}}</p>
+                        <p class="card-text">НАША ЦЕНА ОТ {{Albar_my_low_price[i][18]}}$/сутки вместо <small class="text-muted">от {{Albar_reg_low_price[i][18]}} на сайте прокатчика</small></p>
                     </div>
                 </div>
             </div>
