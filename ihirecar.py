@@ -19,12 +19,12 @@ mail = Mail(app)
 title = "Недорогая прокат аренда автомобиля в Израиле | iHireCar.com"
 title_ru = "Недорогая прокат аренда автомобиля в Израиле | iHireCar.com"
 description = "iHireCar.com Недорогая прокат аренда автомобиля в Израиле, бронирование онлайн, нет предоплаты, безлимитный километраж, нет скрытых платежей, говорим по русски, отделения в Бен Гурион, Тель Авив, Хайфа, Эйлат, Нетания, Ашдод, эконом семейные и люкс автомобили, минивэны"
+description_minivan_ru = "iHireCar.com Недорогая прокат аренда автомобиля в Израиле, бронирование онлайн, нет предоплаты, безлимитный километраж, нет скрытых платежей, говорим по русски, отделения в Бен Гурион, Тель Авив, Хайфа, Эйлат, Нетания, Ашдод, эконом семейные и люкс автомобили, минивэны"
+
 insurance_text_ru_CDW = """Дополнительная страховка (Super CDW) <br/>не обязательная и снижает ответственность арендатора до Нуля в случае ущерба автомобилю (т.е отменяет франшизу).
 Приобрести данный вид страхования возможно только в дополнение к базовому полису(CDW/LDW & TP).
 * Данный вид страхования не покрывает повреждения, нанесенные шинам, колесам, стеклам, крыше, а так же ходовой части автомобиля. Арендатор обязан выплатить полную сумму ущерба, нанесенного этим частям автомобиля."""
 
-#Albar_Categories = ["B", "C", "D", "E"]
-#Albar_json = json.dumps(Albar_Categories)
 
 
 Albar_my_low_price_20191229 = [
@@ -81,8 +81,6 @@ Albar_reg_low_price_20191229 = [
     ["2c531676-0cc5-497b-97b9-471de030f931_250","250","Y (FVMR)","Renault Traffic or Similar (Man. 9 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/250.jpg","9","3","2","True","0","True","False","","0","0.75","0.0","119.64","3","358.92","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","358.92"],
     ["fd2b24cc-0782-48dd-bc96-e14b4a15aa6e_260","260","Z (LVAR)","VW Transporter or Similar (Aut. 9 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/260t2.jpg","9","3","3","True","0","True","False","","0","0.75","0.0","124.22","3","372.66","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","372.66"],
     ["91432661-37dd-4a85-889f-54ad233de6f1_225","225","V8 (FVAR)","Kia Carnival or Similar (Aut. 8 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/225.jpg","8","3","2","True","0","True","False","","0","0.75","0.0","81.27","3","243.81","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","243.81"]
-
-
 ]
 
 
@@ -115,39 +113,63 @@ Albar_reg_high_price_20191229 = [
 ]
 
 Albar_my_high_price_20191229 = [
-
     ["Id","CarCategoryId","CarCategoryCode","CarCategoryName","Currency","CurrencySymbol","ImageLink","NumberOfPeople","NumberOfSmallBags","NumberOfLargeBags","AirConditioner","Airbags","Radio","PowerSteering","Gear","Doors","PriceExtraKm","KmQuota","UnitPrice","Days","Price","Unit","ImmidiateConfirmation","DiscountRate","PriceAfterDiscount","RateCodeSelected","LocationIDSupplier","SupplierLogoImageLink","MinimumAge","RentalDays","MinimumDays","DrivingExperienceRequired","WinterTiresFee","RentalContractFee","SupplierCode","Terms","IncludedInVoucher","Fees","CarGuid","ComparePrice"],
-["88dd0aa5-f700-4660-88fe-c78c09f15e8a_10","10","B (MBMR)","Suzuki Alto or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/10t1.jpg","4","2","1","True","0","True","True","","0","0.45","0.0","22.00","3","66.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","66.00"],
-["18b0718f-0f1c-49c7-857b-3b50a5cdf29c_30","30","C (EBAR)"," Kia Picanto or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/30t1.jpg","4","2","1","True","0","True","False","","0","0.45","0.0","23.00","3","69.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","69.00"],
-["39e8e91b-b984-4426-ac7c-fcf3f00fa764_15","15","Q (MBAR)","Fiat 500 or Similar (2 Doors)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/15t1.jpg","4","2","0","True","0","True","False","","2","0.45","0.0","22.00","3","66.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","66.00"],
-["7cf54c00-152c-411d-8872-25f664036195_20","20","D (ECAR)","Hyundai i20 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/20t1.jpg","4","2","1","True","0","True","False","","0","0.45","0.0","24.00","3","72.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","72.00"],
-["cd5521b0-6cff-4039-8d42-52eb630db682_50","50","E (EDAR)","Ford Fiesta or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/50t.jpg","5","2","1","True","0","True","False","","0","0.45","0.0","25.00","3","75.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","75.00"],
-["4b42d3cc-b6e7-4e96-b5e7-f998ad74b035_60","60","F (EZAR)","Hyundai i25 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/60t1.jpg","5","2","1","True","0","True","False","","0","0.5","0.0","28.00","3","84.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","84.00"],
-["4fc3d342-c027-4ca3-92da-a8826a553e2c_90","90","I (CCAR)","VW Golf or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/90t1.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","30.00","3","90.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","90.00"],
-["59750dba-2058-4bbe-9634-b6e29ddbe410_65","65","FX (DBAR)","Renault Megane Coupe or Similar (2 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/65t1.jpg","5","2","1","True","0","True","False","","0","0.5","0.0","29.00","3","87.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","87.00"],
-["69e83c7d-3e26-4b84-84e9-7f9e2e283b2c_91","91","IW (CWAR)","Seat Leon SW or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/91t1.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","32.00","3","96.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","96.00"],
-["6e9ab29d-03eb-4c86-afdc-5bc90b786116_80","80","H (CDAR)","VW Jetta or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/80t.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","36.00","3","108.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","108.00"],
-["99ad843d-71ed-4875-98a3-3fcc8657797a_130","130","M (SDAR)","Mazda 6 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/130t.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","46.00","3","138.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","138.00"],
-["32cd346b-75bc-4925-a4d8-0eda5989fcf6_180","180","R (SCAR)"," VW Passat or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/180t1.jpg","5","2","2","True","0","True","False","","0","0.75","0.0","73.00","3","219.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","219.00"],
-["ee82454e-8d00-4063-8117-bbccf8bd7a6c_160","160","P (LDAR)","Nissan Maxima or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/160t3.jpg","5","2","2","True","0","True","False","","0","0.75","0.0","109.00","3","327.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","327.00"],
-["13854579-7b21-4ad4-9449-027a00c41b4c_230","230","W (LCBR)","Audi A6 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/230t.jpg","5","3","2","True","0","True","False","","0","0.75","0.0","152.00","3","456.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","456.00"],
-["f5e939c9-e5fe-4b90-a4ae-ed4353dc8116_110","110","K (PDAR)","BMW 318i or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/110.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","87.00","3","261.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","261.00"],
-["a1dd48ed-1c67-430c-afda-bcaa0d526f92_100","100","J (SFBR)","Hyundai Tucson or Similar (Aut. 5 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/100t.jpg","5","2","2","True","0","True","False","","0","0.75","0.0","72.00","3","216.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","216.00"],
-["de7652d4-d3ba-4bfb-af09-c33e6e6331f9_200","200","T (CPMR)","VW Caddy or Similar (Man. 5 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/200t1.jpg","5","3","2","True","0","True","False","","0","0.75","0.0","69.00","3","207.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","207.00"],
-["eb06f8a5-a4a6-474a-8e28-7863e95ec9c8_135","135","MH (RDAR)","Hyundai Sonata or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/135.png","5","2","2","True","0","True","False","","0","0.5","0.0","57.00","3","171.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","171.00"],
-["56c019c8-846f-47d5-827b-965998b35d58_210","210","U (IVAR)","Opel Zafira or Similar (Aut. 7 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/210t.jpg","7","3","2","True","0","True","False","","0","0.75","0.0","69.00","3","207.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","207.00"],
-["581387bf-d708-4a93-a25c-2d2c72a28314_150","150","O (LFBR)","Ford Edge or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/150t1.jpg","5","3","2","True","0","True","False","","0","0.75","0.0","104.00","3","312.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","312.00"],
-["5fc0a198-07c5-423c-9f93-2c3efea1aa56_220","220","V (SVAR)","Mitsubishi Outlander or Similar (Aut. 7 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/220t.jpg","7","3","2","True","0","True","False","","0","0.75","0.0","88.00","3","264.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","264.00"],
-["7fa7ae4c-9eff-4c18-8c73-a7ad81627a89_250","250","Y (FVMR)","Renault Traffic or Similar (Man. 9 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/250.jpg","9","3","2","True","0","True","False","","0","0.75","0.0","85.00","3","255.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","255.00"],
-["91f893bf-6048-4836-b848-a2238189bb1d_260","260","Z (LVAR)","VW Transporter or Similar (Aut. 9 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/260t2.jpg","9","3","3","True","0","True","False","","0","0.75","0.0","125.00","3","375.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","375.00"],
-["f7293a18-4c1d-48e7-a950-e277400a3ca8_225","225","V8 (FVAR)","Kia Carnival or Similar (Aut. 8 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/225.jpg","8","3","2","True","0","True","False","","0","0.75","0.0","113.00","3","339.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","339.00"]
-
+    ["88dd0aa5-f700-4660-88fe-c78c09f15e8a_10","10","B (MBMR)","Suzuki Alto or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/10t1.jpg","4","2","1","True","0","True","True","","0","0.45","0.0","22.00","3","66.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","66.00"],
+    ["18b0718f-0f1c-49c7-857b-3b50a5cdf29c_30","30","C (EBAR)"," Kia Picanto or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/30t1.jpg","4","2","1","True","0","True","False","","0","0.45","0.0","23.00","3","69.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","69.00"],
+    ["39e8e91b-b984-4426-ac7c-fcf3f00fa764_15","15","Q (MBAR)","Fiat 500 or Similar (2 Doors)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/15t1.jpg","4","2","0","True","0","True","False","","2","0.45","0.0","22.00","3","66.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","66.00"],
+    ["7cf54c00-152c-411d-8872-25f664036195_20","20","D (ECAR)","Hyundai i20 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/20t1.jpg","4","2","1","True","0","True","False","","0","0.45","0.0","24.00","3","72.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","72.00"],
+    ["cd5521b0-6cff-4039-8d42-52eb630db682_50","50","E (EDAR)","Ford Fiesta or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/50t.jpg","5","2","1","True","0","True","False","","0","0.45","0.0","25.00","3","75.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","75.00"],
+    ["4b42d3cc-b6e7-4e96-b5e7-f998ad74b035_60","60","F (EZAR)","Hyundai i25 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/60t1.jpg","5","2","1","True","0","True","False","","0","0.5","0.0","28.00","3","84.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","84.00"],
+    ["4fc3d342-c027-4ca3-92da-a8826a553e2c_90","90","I (CCAR)","VW Golf or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/90t1.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","30.00","3","90.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","90.00"],
+    ["59750dba-2058-4bbe-9634-b6e29ddbe410_65","65","FX (DBAR)","Renault Megane Coupe or Similar (2 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/65t1.jpg","5","2","1","True","0","True","False","","0","0.5","0.0","29.00","3","87.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","87.00"],
+    ["69e83c7d-3e26-4b84-84e9-7f9e2e283b2c_91","91","IW (CWAR)","Seat Leon SW or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/91t1.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","32.00","3","96.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","96.00"],
+    ["6e9ab29d-03eb-4c86-afdc-5bc90b786116_80","80","H (CDAR)","VW Jetta or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/80t.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","36.00","3","108.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","108.00"],
+    ["99ad843d-71ed-4875-98a3-3fcc8657797a_130","130","M (SDAR)","Mazda 6 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/130t.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","46.00","3","138.00","D","True","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","138.00"],
+    ["32cd346b-75bc-4925-a4d8-0eda5989fcf6_180","180","R (SCAR)"," VW Passat or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/180t1.jpg","5","2","2","True","0","True","False","","0","0.75","0.0","73.00","3","219.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","219.00"],
+    ["ee82454e-8d00-4063-8117-bbccf8bd7a6c_160","160","P (LDAR)","Nissan Maxima or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/160t3.jpg","5","2","2","True","0","True","False","","0","0.75","0.0","109.00","3","327.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","327.00"],
+    ["13854579-7b21-4ad4-9449-027a00c41b4c_230","230","W (LCBR)","Audi A6 or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/230t.jpg","5","3","2","True","0","True","False","","0","0.75","0.0","152.00","3","456.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","456.00"],
+    ["f5e939c9-e5fe-4b90-a4ae-ed4353dc8116_110","110","K (PDAR)","BMW 318i or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/110.jpg","5","2","2","True","0","True","False","","0","0.5","0.0","87.00","3","261.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","261.00"],
+    ["a1dd48ed-1c67-430c-afda-bcaa0d526f92_100","100","J (SFBR)","Hyundai Tucson or Similar (Aut. 5 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/100t.jpg","5","2","2","True","0","True","False","","0","0.75","0.0","72.00","3","216.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","216.00"],
+    ["de7652d4-d3ba-4bfb-af09-c33e6e6331f9_200","200","T (CPMR)","VW Caddy or Similar (Man. 5 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/200t1.jpg","5","3","2","True","0","True","False","","0","0.75","0.0","69.00","3","207.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","207.00"],
+    ["eb06f8a5-a4a6-474a-8e28-7863e95ec9c8_135","135","MH (RDAR)","Hyundai Sonata or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/135.png","5","2","2","True","0","True","False","","0","0.5","0.0","57.00","3","171.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","171.00"],
+    ["56c019c8-846f-47d5-827b-965998b35d58_210","210","U (IVAR)","Opel Zafira or Similar (Aut. 7 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/210t.jpg","7","3","2","True","0","True","False","","0","0.75","0.0","69.00","3","207.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","207.00"],
+    ["581387bf-d708-4a93-a25c-2d2c72a28314_150","150","O (LFBR)","Ford Edge or Similar","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/150t1.jpg","5","3","2","True","0","True","False","","0","0.75","0.0","104.00","3","312.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","312.00"],
+    ["5fc0a198-07c5-423c-9f93-2c3efea1aa56_220","220","V (SVAR)","Mitsubishi Outlander or Similar (Aut. 7 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/220t.jpg","7","3","2","True","0","True","False","","0","0.75","0.0","88.00","3","264.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","264.00"],
+    ["7fa7ae4c-9eff-4c18-8c73-a7ad81627a89_250","250","Y (FVMR)","Renault Traffic or Similar (Man. 9 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/250.jpg","9","3","2","True","0","True","False","","0","0.75","0.0","85.00","3","255.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","255.00"],
+    ["91f893bf-6048-4836-b848-a2238189bb1d_260","260","Z (LVAR)","VW Transporter or Similar (Aut. 9 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/260t2.jpg","9","3","3","True","0","True","False","","0","0.75","0.0","125.00","3","375.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","375.00"],
+    ["f7293a18-4c1d-48e7-a950-e277400a3ca8_225","225","V8 (FVAR)","Kia Carnival or Similar (Aut. 8 Seats)","$","null","https://rent.albar.co.il/CarImages/Rent/CarCategories/225.jpg","8","3","2","True","0","True","False","","0","0.75","0.0","113.00","3","339.00","D","False","0","0","null","null","null","0","0","0","0","null","null","null","null","null","null","null","339.00"]
 ]
 
+Albar_branches = [
+    ["BranchTypeId","Id","Name","City","Address","Phone","Fax","Latitude","Longitude","OpeningHours","CityCode"],
+    ["2","339","Tel Aviv Ben Gurion International Airport  TLVT03 ","Lod","Ben Gurion International Airport","972 3 6058000","972 3 9754469\n","31.994406","34.896553","24 hours a day","Lod"],
+    ["2","301","Tel Aviv Hayarkon  TLVC02 ","Tel Aviv","80 Hayarkon Street","972 3 6335252","972 3 5102573","32.077054","34.767302","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Tel Aviv"],
+    ["2","328","Tel Aviv   Hamelacha  TLVC01 ","Tel Aviv","3 Hamelacha Street","972 3 7588599","972 3 6884079","32.061739","34.784659","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Tel Aviv"],
+    ["2","318","Jerusalem   King David  JRSC01 ","Jerusalem","19 King David Street","972 2 5001800","972 2 5001700","31.775051","35.221945","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Jerusalem"],
+    ["2","381","Eilat Ramon International Airport  ETMT01 ","Eilat","Ramon International Airport , Timna Vally","972 8 6239300\n","972 8 6272000\n","29.724311","35.004409","Sun-Thu 05:30-23:00<br/>Fri 05:30-20:00","Eilat"],
+    ["2","303","Haifa  HFAC01 ","Haifa","27 Haashlag Street","972 4 8409333","972 4 8412888\n","32.790922","35.041871","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Haifa"],
+    ["2","316","Netanya  TLVN03 ","Natanya","1 Ussishkin Street","972 9 8612000","972 9 8843575","32.329953","34.851411","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Natanya"],
+    ["2","326","Eilat  ETHC01 ","Eilat","3 Sheshet Hayamim Street","972 8 6998877","972 8 6900100","29.569949","34.963356","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Eilat"],
+    ["2","308","Afula  HFAS01 ","Afula","70 Menachem Begin Street","972 4 6204500\n","972 4 6207000\n","32.602102","35.29713","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Afula"],
+    ["2","335","Ashdod  TLVS06 ","Ashdod","7 Haorgim Street","972 8 6228815","972 8 6100500","31.810989","34.66169","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Ashdod"],
+    ["2","306","Beer Sheva  BEVC01 ","Beer Sheva","18 Itzhak Nafha Street","972 8 6311163\n","972 8 9933800\n","31.249272","34.811306","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Beer Sheva"],
+    ["2","321","Beit Shemesh  JRSN01 ","Beit Shemesh","1 Nahar Hayarden Street","972 2 8010047\n","972 2 9910300","31.736459","34.992455","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Beit Shemesh"],
+    ["2","341","Bnei Brak   Kahanman 106  TLVS01 ","Bnei Brak","106 Kahanman Street","972 3 6207300\n","972 3 6207600\n","32.077497","34.828951","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Bnei Brak"],
+    ["2","300","Bnei Brak   Mivtza Kadesh  TLVE01 ","Bnei Brak","64 Mivtza Kadesh Street","972 3 6160700\n","972 3 6151462","32.100526","34.828772","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Bnei Brak"],
+    ["2","329","Elad","El'ad","10 Rabbi Shimon Ben Shetah ","972 3 9501500","972 3 9414512","32.054681","34.960596","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","El'ad"],
+    ["2","535","Herzliya  TLVN01 ","Herzeliya","9 Hamenofim Street","972 9 7666800","972 9 7490900","32.160801","34.807772","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Herzeliya"],
+    ["2","322","Jerusalem   Romema","Jerusalem","21 Shamgar Street","972 2 6339666\n","972 2 5001200","31.794866","35.187715","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Jerusalem"],
+    ["2","302","Jerusalem   Talpiyot","Jerusalem","26 Moshe Baram Street","972 2 6482896","972 2 6483094","31.781581","35.209244","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Jerusalem"],
+    ["2","310","Kfar Saba  TLVN02 ","Kfar Saba","17 HaTaas Street","972 9 7884888","972 9 8358496","32.176357","34.927125","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Kfar Saba"],
+    ["2","325","Kiryat Shmone  KSWC01 ","Kiryat Shmone","1 Hayarden Street","972 4 6665959","972 4 6202100\n","33.211485","35.571238","Sun-Thu 08:00-17:30<br/>Fri 08:00-13:00","Kiryat Shmone"],
+    ["2","340","Nes Tziona  TLVS04 ","Nes Tziona","10 Hapatish Street","972 8 6991340","972 8 6103300","31.921971","34.793011","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Nes Tziona"],
+    ["2","333","Netivot","Netivot","13 Habonim Street","972 8 6888711","972 8 6235000","31.419581","34.597146","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Netivot"],
+    ["2","307","Petah Tikva  TLVE02 ","Petach Tikva","82 Jabotinski Street","972 3 6331440\n","972 3 5059700\n","32.176357","34.927125","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Petach Tikva"],
+    ["2","332","Rehovot  TLVS05 ","Rehovot","96 Herzl Street","972 8 9417980","972 8 9415693","31.886905","34.81419","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Rehovot"],
+    ["2","330","Rishon LeZion  TLVS03 ","Rishon LeTsiyon","14 Saharov Street","972 3 5363600","972 3 5363500","31.991093","34.77095","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Rishon LeTsiyon"],
+    ["2","323","Tiberias  HFAE01 ","Tiberias","71 Hayarden Street","972 4 6666123","972 4 6944383","32.787906","35.537311","Sun-Thu 08:00-18:00<br/>Fri 08:00-13:00","Tiberias"]
+]
 
-
-
-branches_albar = json.dumps('branches_Albar.json')
 
 # Russian site
 @app.route('/sitemap')
@@ -156,15 +178,19 @@ def sitemap(): return render_template('sitemap.xml')
 @app.route('/robot.txt')
 def robot(): return render_template('robot.txt')
 
-
-
 @app.route('/')
 def index():
-    return render_template('index_ru.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,description=description)
+    return render_template('index_ru.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
 
 @app.route('/ru/')
 def index_ru():
-    return render_template('index_ru.html', title=title_ru, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,description=description)
+    return render_template('index_ru.html', title=title_ru, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,Albar_branches=Albar_branches, description=description)
+
+
+@app.route('/ru/minivans')
+def minivans():
+    return render_template('minivans_ru.html', title=title_ru, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,Albar_branches=Albar_branches, description=description_minivan_ru)
+
 
 
 @app.route('/ru/request_car', methods=["POST"])

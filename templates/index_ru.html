@@ -13,12 +13,6 @@
     <br><label><input type="checkbox" id="tourist" name="tourist" value="V"> Турист есть виза B2/B3</label>
     <br><label><input type="checkbox" id="creditcard" name="creditcard" value="V"> Есть кредитная карта</label>
 
-    <script>
-        function check() {
-            document.getElementById("tourist").checked = true;
-        }
-    </script>
-
 {% endblock %}
 
 {% block content_left %}
@@ -71,28 +65,9 @@
         <label for="pickup-location">Аренда</label>
         <select class="form-control" name="pickup-location" id="pickup-location" required>
             <option value="">Отделение</option>
-            <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
-            <option value="Тель Авив, ул. ха-Яркон, 80">Тель Авив, ул. ха-Яркон, 80</option>
-            <option value="Тель Авив, ул. ха-Масгер, 9">Тель Авив, ул. ха-Масгер, 9</option>
-            <option value="Иерусалим, ул. Кинг Давид, 19">Иерусалим, ул. Кинг Давид, 19</option>
-            <option value="Хайфа, шдерот ха-Гистадрут, 88">Хайфа, шдерот ха-Гистадрут, 88</option>
-            <option value="Нетания, ул. Усишкин, 1">Нетания, ул. Усишкин, 1</option>
-            <option value="Тверия, ул. ха-Ярден, 71">Тверия, ул. ха-Ярден, 71</option>
-            <option value="Эйлат, ул. Шешет ха-Ямим, 3">Эйлат, ул. Шешет ха-Ямим, 3</option>
-            <option value="Афула, ул. Менахем Бегин, 70">Афула, ул. Менахем Бегин, 70</option>
-            <option value="Ашдод, ул. ха-Оргим, 7">Ашдод, ул. ха-Оргим, 7</option>
-            <option value="Беэр Шева, дерех Хеврон, 129">Беэр Шева, дерех Хеврон, 129</option>
-            <option value="Бейт Шемеш, ул. Нахалат Зоар, 10">Бейт Шемеш, ул. Нахалат Зоар, 10</option>
-            <option value="Бней Брак, ул. Каханман, 106">Бней Брак, ул. Каханман, 106</option>
-            <option value="Бней Брак, ул. Мивца Кадош, 64">Бней Брак, ул. Мивца Кадош, 64</option>
-            <option value="Герцелия, ул. Аба Евен, 8">Герцелия, ул. Аба Евен, 8</option>
-            <option value="Холон, ул. ха-Меркава, 73">Холон, ул. ха-Меркава, 73</option>
-            <option value="Кфар Саба, ул. ха-Таяс, 17">Кфар Саба, ул. ха-Таяс, 17</option>
-            <option value="Кирьят Шмона, ул. ха-Ярден, 1">Кирьят Шмона, ул. ха-Ярден, 1</option>
-            <option value="Нес Циона, ул. ха-Патиш, 10">Нес Циона, ул. ха-Патиш, 10</option>
-            <option value="Петах Тиква, ул. Жаботински, 82">Петах Тиква, ул. Жаботински, 82</option>
-            <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
-            <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
+            {% for i in range(1,27) %}
+                <option value="{{Albar_branches[i][3]}}">{{Albar_branches[i][3]}}, {{Albar_branches[i][4]}} - +{{Albar_branches[i][5]}}</option>
+            {% endfor %}
         </select>
         <input class="datepicker" name="date_rent"  data-date-format="mm/dd/yyyy" placeholder="Аренда mm/dd/yyyy">
         <input type="time" name="time_rent">
@@ -101,28 +76,9 @@
 
         <select class="form-control" name="dropoff-location" id="dropoff-location" required>
             <option value="">Отделение</option>
-            <option value="Аэропорт Бен Гурион">Аэропорт Бен Гурион</option>
-            <option value="Тель Авив, ул. ха-Яркон, 80">Тель Авив, ул. ха-Яркон, 80</option>
-            <option value="Тель Авив, ул. ха-Масгер, 9">Тель Авив, ул. ха-Масгер, 9</option>
-            <option value="Иерусалим, ул. Кинг Давид, 19">Иерусалим, ул. Кинг Давид, 19</option>
-            <option value="Хайфа, шдерот ха-Гистадрут, 88">Хайфа, шдерот ха-Гистадрут, 88</option>
-            <option value="Нетания, ул. Усишкин, 1">Нетания, ул. Усишкин, 1</option>
-            <option value="Тверия, ул. ха-Ярден, 71">Тверия, ул. ха-Ярден, 71</option>
-            <option value="Эйлат, ул. Шешет ха-Ямим, 3">Эйлат, ул. Шешет ха-Ямим, 3</option>
-            <option value="Афула, ул. Менахем Бегин, 70">Афула, ул. Менахем Бегин, 70</option>
-            <option value="Ашдод, ул. ха-Оргим, 7">Ашдод, ул. ха-Оргим, 7</option>
-            <option value="Беэр Шева, дерех Хеврон, 129">Беэр Шева, дерех Хеврон, 129</option>
-            <option value="Бейт Шемеш, ул. Нахалат Зоар, 10">Бейт Шемеш, ул. Нахалат Зоар, 10</option>
-            <option value="Бней Брак, ул. Каханман, 106">Бней Брак, ул. Каханман, 106</option>
-            <option value="Бней Брак, ул. Мивца Кадош, 64">Бней Брак, ул. Мивца Кадош, 64</option>
-            <option value="Герцелия, ул. Аба Евен, 8">Герцелия, ул. Аба Евен, 8</option>
-            <option value="Холон, ул. ха-Меркава, 73">Холон, ул. ха-Меркава, 73</option>
-            <option value="Кфар Саба, ул. ха-Таяс, 17">Кфар Саба, ул. ха-Таяс, 17</option>
-            <option value="Кирьят Шмона, ул. ха-Ярден, 1">Кирьят Шмона, ул. ха-Ярден, 1</option>
-            <option value="Нес Циона, ул. ха-Патиш, 10">Нес Циона, ул. ха-Патиш, 10</option>
-            <option value="Петах Тиква, ул. Жаботински, 82">Петах Тиква, ул. Жаботински, 82</option>
-            <option value="Реховот, ул. Герцль, 96">Реховот, ул. Герцль, 96</option>
-            <option value="Ришон ле-Цион, ул. Сахаров, 14">Ришон ле-Цион, ул. Сахаров, 14</option>
+            {% for i in range(1,27) %}
+                <option value="{{Albar_branches[i][3]}}">{{Albar_branches[i][3]}}, {{Albar_branches[i][4]}} - +{{Albar_branches[i][5]}}</option>
+            {% endfor %}
         </select>
 
         <input class="datepicker" name="date_return"  data-date-format="mm/dd/yyyy" placeholder="Возврат mm/dd/yyyy">
