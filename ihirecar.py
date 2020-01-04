@@ -180,7 +180,17 @@ def robot(): return render_template('robot.txt')
 
 @app.route('/')
 def index():
-    return render_template('index_main_layout.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
+    return render_template('index_cars.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
+
+@app.route('/index_personal_tours')
+def index_personal_tours():
+    return render_template('index_personal_tours.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
+
+@app.route('/index_group_tours')
+def index_group_tours():
+    return render_template('index_group_tours.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
+
+
 
 @app.route('/ru/')
 def index_ru():
@@ -190,6 +200,22 @@ def index_ru():
 @app.route('/ru/minivans')
 def minivans():
     return render_template('minivans_ru.html', title=title_ru, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229,Albar_branches=Albar_branches, description=description_minivan_ru)
+
+for i in range (1,25):
+    print(Albar_my_high_price_20191229[i][1])
+    number = Albar_my_high_price_20191229[i][1]
+    page = Albar_my_high_price_20191229[i][1] + ".html"
+    title = Albar_my_high_price_20191229[i][1]
+    print(page)
+    content = '{% extends "index_item_layout.html" %} {% block content %}{% endblock %}'
+    def number():
+        return render_template('page', title=title, content= content )
+
+
+def item_page(item):
+    content = '{% extends "index_item_layout.html" %} {% block content %}{% endblock %}'
+    return render_template('item', title=title, content= content )
+
 
 
 
