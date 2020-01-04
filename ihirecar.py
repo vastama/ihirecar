@@ -9,8 +9,8 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": os.environ['EMAIL_USER'],
-    "MAIL_PASSWORD": os.environ['EMAIL_PASSWORD']
+    #"MAIL_USERNAME": os.environ['EMAIL_USER'],
+    #"MAIL_PASSWORD": os.environ['EMAIL_PASSWORD']
 }
 
 app.config.update(mail_settings)
@@ -180,7 +180,7 @@ def robot(): return render_template('robot.txt')
 
 @app.route('/')
 def index():
-    return render_template('index_ru.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
+    return render_template('index_main_layout.html', title=title, Albar_my_low_price = Albar_my_low_price_20191229, Albar_my_high_price = Albar_my_high_price_20191229, Albar_reg_low_price = Albar_reg_low_price_20191229, Albar_reg_high_price = Albar_reg_high_price_20191229, Albar_branches=Albar_branches, description=description)
 
 @app.route('/ru/')
 def index_ru():
