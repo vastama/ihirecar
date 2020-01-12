@@ -1,18 +1,18 @@
 {% extends "index_main_layout.html" %}
 {% block content %}
 
-{% for i in range(1,25) %}
+{% for i in range(0,24) %}
 <div class="col-lg-4 col-md-6 mb-4">
     <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="{{ Albar_my_low_price[i][6] }}" alt=""></a>
+        <a href="#"><img class="card-img-top" src="{{ Albar_my_low_price[i][4] }}" alt=""></a>
         <div class="card-body">
             <h4 class="card-title">
-                <a href="/{{Albar_my_low_price[i][1]}}">{{Albar_my_low_price[i][3]}} <br>в категории {{Albar_my_low_price[i][2]}} </a>
+                <a href="/{{Albar_my_low_price[i][3]}}">{{Albar_my_low_price[i][3]}} </a>
             </h4>
-            <h5>от {{Albar_my_low_price[i][18]}} USD/сутки</h5>
+            <h5><br>или аналогичная машина в категории {{Albar_my_low_price[i][2]}} от {{Albar_my_low_price[i][12]}} USD/сутки</h5>
             <p class="card-text">
-                Мест - {{Albar_my_low_price[i][7]}}
-                <br>Сумок:<br> маленьких - {{Albar_my_low_price[i][8]}} | больших - {{Albar_my_low_price[i][9]}}</p>
+                Мест - {{Albar_my_low_price[i][5]}}
+                <!--<br>Сумок:<br> маленьких - {{Albar_my_low_price[i][8]}} | больших - {{Albar_my_low_price[i][9]}}--></p>
         </div>
         <div class="card-footer">
             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
