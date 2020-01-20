@@ -143,6 +143,7 @@ def robot():
     return render_template('robots.txt')
 
 
+
 @APP.route('/')
 def index():
     """
@@ -152,6 +153,16 @@ def index():
         ALBAR_LOW_PRICE_MY[i][3] = ALBAR_LOW_PRICE_MY[i][3].split(" or ")[0]
     return render_template('index_cars.html',
                            Albar_my_low_price=ALBAR_LOW_PRICE_MY,
+                           title=SITE_TITLE,
+                           description=SITE_DESCRIPTION)
+
+
+@APP.route('/test')
+def test():
+    """
+    The function returns path to individual tours page
+    """
+    return render_template('first_page.html',
                            title=SITE_TITLE,
                            description=SITE_DESCRIPTION)
 
@@ -194,6 +205,7 @@ def minivans():
     return render_template('minivans_ru.html',
                            title=SITE_TITLE,
                            description=SITE_DESCRIPTION)
+
 
 
 @APP.route('/ru/request_car', methods=["POST"])
