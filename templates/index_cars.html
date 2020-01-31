@@ -1,8 +1,11 @@
 {% extends "index_main_layout.html" %}
 {% block content %}
 
+
+<div class="container">
+    <h3 class="h3">shopping Demo-1 </h3>
 {% for i in range(0,24) %}
-<div class="col-lg-4 col-md-6 mb-4">
+<!--<div class="col-lg-4 col-md-6 mb-4">
     <div class="card h-100">
         <a href="#"><img class="card-img-top" src="{{ Albar_my_low_price[i][4] }}" alt=""></a>
         <div class="card-body">
@@ -12,14 +15,157 @@
             <h5><br>или аналогичная машина в категории {{Albar_my_low_price[i][2]}} от {{Albar_my_low_price[i][12]}} USD/сутки</h5>
             <p class="card-text">
                 Мест - {{Albar_my_low_price[i][5]}}
-                <!--<br>Сумок:<br> маленьких - {{Albar_my_low_price[i][8]}} | больших - {{Albar_my_low_price[i][9]}}--></p>
+                &lt;!&ndash;<br>Сумок:<br> маленьких - {{Albar_my_low_price[i][8]}} | больших - {{Albar_my_low_price[i][9]}}&ndash;&gt;</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
         </div>
     </div>
-</div>
-{% endfor %}
+</div>-->
 
+<!--<div class="row menu_style1">
+    <div class="col-md-4">
+        <div class="single_menu_list">
+            <img src="{{ Albar_my_low_price[i][4] }}" alt="">
+            <div class="menu_content">
+                <h4>Chicken Fried Salad  <span>$45</span></h4>
+                <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="{{ Albar_my_low_price[i][4] }}">
+                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-2.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">20%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star disable"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Women's Blouse</a></h3>
+                            <div class="price">$16.00
+                                <span>$20.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-3.jpg">
+                                <img class="pic-2" src="{{ Albar_my_low_price[i][4] }}">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                            <div class="price">$5.00
+                                <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-5.jpg">
+                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-6.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                            <div class="price">$5.00
+                                <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-7.jpg">
+                                <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo9/images/img-8.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">Sale</span>
+                            <span class="product-discount-label">50%</span>
+                        </div>
+                        <ul class="rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                        </ul>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Plain Tshirt</a></h3>
+                            <div class="price">$5.00
+                                <span>$10.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+
+{% endfor %}
+</div>
+<hr>
 
 {% endblock %}

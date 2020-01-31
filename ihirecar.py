@@ -166,6 +166,24 @@ def test():
                            title=SITE_TITLE,
                            description=SITE_DESCRIPTION)
 
+@APP.route('/test1')
+def test1():
+    """
+    The function returns path to individual tours page
+    """
+    return render_template('cars_template.html',
+                           title=SITE_TITLE,
+                           description=SITE_DESCRIPTION)
+
+
+@APP.route('/template1')
+def template1():
+    """
+    The function returns path to individual tours page
+    """
+    return render_template('template1.html',
+                           title=SITE_TITLE,
+                           description=SITE_DESCRIPTION)
 
 @APP.route('/index_personal_tours')
 def index_personal_tours():
