@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 )
@@ -13,6 +15,12 @@ type Category struct {
 	code1, seats                                                int
 	car                                                         string
 	price, a, s, d, f, g, h, j, w, e, k, l, z, x, c, v, b, n, m float32
+}
+
+
+
+type resultsPage struct {
+	Title string
 }
 
 var Cat = map[string]Category{
@@ -49,10 +57,54 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func main() {
-	fmt.Println("Starting web server on port 50002")
+func ResultsHandler(w http.ResponseWriter, r *http.Request) {
+	page := AlbarRegPriceList
+	t, err := template.ParseFiles("templates/results.html")
+	if err != nil {
+		fmt.Printf("Error: %v", err)
+	}
+	t.Execute(w, page)
+}
 
-	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":50002", nil))
-	//fmt.Println("Stopping seb server")
+func formHandler(w http.ResponseWriter, r *http.Request) {
+	tmpl, err := template.ParseFiles("templates/form.html")
+	if err != nil {
+		fmt.Printf("Error: %v", err)
+	}
+
+	if r.Method != http.MethodPost {
+		tmpl.Execute(w, nil)
+		return
+	}
+	PriceListUrl = priceListUrl{
+		pickupDate:          r.FormValue("pickupDate"),
+		dropoffDate:         r.FormValue("dropoffDate"),
+		driverAge:           r.FormValue("driverAge"),
+		dropOffLocationCode: "300",
+		pickupLocationCode:  "300",
+		userType:            "Regular",
+		priceListId:         "1029",
+	}
+
+	tmpl.Execute(w, struct{ Success bool }{true})
+	log.Print("formHandler: Price list url:",PriceListUrl)
+	JsonRaw := ReadPriceList(PriceListUrl)
+	log.Print("formHandler: JsonRaw:",JsonRaw)
+}
+
+var AlbarRegPriceList = CarCategory{}
+
+func main() {
+	log.Print("Main: Price list url:",PriceListUrl)
+	JsonRaw := ReadPriceList(PriceListUrl)
+	err := json.Unmarshal([]byte(JsonRaw), &AlbarRegPriceList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	fmt.Println("Starting web server on port 50003")
+	http.HandleFunc("/form/", formHandler)
+	http.HandleFunc("/results/", ResultsHandler)
+	log.Fatal(http.ListenAndServe(":50003", nil))
+
 }

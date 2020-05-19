@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+<!-- forms.html -->
+{{if .Success}}
+    <h1>Thanks for your message!</h1>
+    <p>Please follow <a href="{{ .PriceListUrl }}">this link</a>.</p>
+
+{{else}}
+    <h1>Rent car</h1>
+    <form method="POST">
+        <label>pickupDate:</label><br />
+        <input type="date" name="pickupDate"><br />
+        <label>dropoffDate:</label>
+        <input type="date" name="dropoffDate"><br />
+        <label>driverAge:</label>
+        <input type="number" name="driverAge"><br />
+
+
+        <input type="submit">
+    </form>
+{{end}}
+</body>
+</html>

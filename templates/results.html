@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{{range .}}
+    <br/>
+    Category Name: {{ .CarCategoryName }} Price/Day: {{ .UnitPrice}}{{.Currency}} days: {{.Days}} Total Price: {{.Price}}{{.Currency}}
+{{end}}
+
+</body>
+</html>

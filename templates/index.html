@@ -1,0 +1,9 @@
+{{define "title"}}A templated page{{end}}
+
+{{define "body"}}
+<h1>Hello from a templated page</h1>
+{{for i := range Cat {
+fmt.Fprintf(w, "\n Category: %3s - %40s or similar, starting from: %3.02f USD/Day", Cat[i].name, Cat[i].car, Cat[i].price)
+}}
+}
+{{end}}
