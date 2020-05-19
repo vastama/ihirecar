@@ -89,22 +89,26 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, struct{ Success bool }{true})
 	log.Print("formHandler: Price list url:",PriceListUrl)
 	JsonRaw := ReadPriceList(PriceListUrl)
+	err = json.Unmarshal([]byte(JsonRaw), &AlbarRegPriceList)
+	if err != nil {
+		panic(err.Error())
+	}
 	log.Print("formHandler: JsonRaw:",JsonRaw)
 }
 
 var AlbarRegPriceList = CarCategory{}
 
 func main() {
-	log.Print("Main: Price list url:",PriceListUrl)
+	/*log.Print("Main: Price list url:",PriceListUrl)
 	JsonRaw := ReadPriceList(PriceListUrl)
 	err := json.Unmarshal([]byte(JsonRaw), &AlbarRegPriceList)
 	if err != nil {
 		panic(err.Error())
-	}
+	}*/
 
-	fmt.Println("Starting web server on port 50003")
-	http.HandleFunc("/form/", formHandler)
+	fmt.Println("Starting web server on port 50002")
+	http.HandleFunc("/", formHandler)
 	http.HandleFunc("/results/", ResultsHandler)
-	log.Fatal(http.ListenAndServe(":50003", nil))
+	log.Fatal(http.ListenAndServe(":50002", nil))
 
 }

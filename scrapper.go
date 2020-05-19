@@ -17,6 +17,7 @@ type CarCategory []struct {
 	CarCategoryName           string  `json:"CarCategoryName"`
 	Currency                  string  `json:"Currency"`
 	CurrencySymbol            string  `json:"CurrencySymbol"`
+	ImageLink                 string  `json:"ImageLink"`
 	NumberOfSmallBags         int8    `json:"NumberOfSmallBags"`
 	NumberOfLargeBags         int     `json:"NumberOfLargeBags"`
 	AirConditioner            bool    `json:"AirConditioner"`
@@ -76,12 +77,12 @@ type priceListUrl struct {
 	categoryId          string `json:"categoryId"`
 	countryCode         string `json:"countryCode"`
 	driverAge           string `json:"driverAge"`
-	dropOffLocationCode string    `json:"dropOffLocationCode"`
+	dropOffLocationCode string `json:"dropOffLocationCode"`
 	dropoffDate         string `json:"dropoffDate"`
 	guid                string `json:"guid"`
 	pickupDate          string `json:"pickupDate"`
-	pickupLocationCode  string    `json:"pickupLocationCode"`
-	priceListId         string    `json:"priceListId"`
+	pickupLocationCode  string `json:"pickupLocationCode"`
+	priceListId         string `json:"priceListId"`
 	promoCode           string `json:"promoCode"`
 	userType            string `json:"userType"`
 }
@@ -91,16 +92,15 @@ var PriceListUrl priceListUrl
 func ReadPriceList(urlGet priceListUrl) string {
 	log.Print("ReadPriceList: Price list url:", PriceListUrl)
 	urlGet1 := albarPriceListUrl + "?" + "categoryId=&countryCode=" +
-		"&driverAge=" +	urlGet.driverAge +
+		"&driverAge=" + urlGet.driverAge +
 		"&dropOffLocationCode=" + urlGet.dropOffLocationCode +
-		"&dropoffDate=" + urlGet.dropoffDate +  "T09:00:00" +
+		"&dropoffDate=" + urlGet.dropoffDate + ":00" +
 		"&guid=78284d45-4c0d-4cec-a8fb-ecfd217956f5" +
-		"&pickupDate=" + urlGet.pickupDate +"T09:00:0" +
-		"0&pickupLocationCode=" + urlGet.pickupLocationCode +
+		"&pickupDate=" + urlGet.pickupDate + ":00" +
+		"&pickupLocationCode=" + urlGet.pickupLocationCode +
 		"&priceListId=" + urlGet.priceListId +
 		"&promoCode=&userType=" + urlGet.userType
 	log.Print("ReadPriceList: Price list urlGet1:", urlGet1)
-	//"&dropOffLocationCode=339&dropoffDate=2020-05-24T09:00:00&guid=78284d45-4c0d-4cec-a8fb-ecfd217956f5&pickupDate=2020-05-21T09:00:00&pickupLocationCode=339&priceListId=" + urlGet.priceListId + "&promoCode=&userType=" + urlGet.userType
 
 	resp, err := http.Get(urlGet1)
 	if err != nil {
@@ -117,45 +117,3 @@ func ReadPriceList(urlGet priceListUrl) string {
 	JsonRaw := "[" + z[0] + "]"
 	return JsonRaw
 }
-
-func main1() {
-
-	//var AlbarRegPriceList = CarCategory{}
-
-	/*var priceListUrlHebRegAlbar = priceListUrl{
-		albarPriceListUrl,
-		"",
-		"",
-		"28",
-		"300",
-		"2020-05-24T09:00:00",
-		"f11d41a2-b1f3-4ae4-8eb2-40d619c8a0ca",
-		"2020-05-21T09:00:00",
-		"300",
-		"1029",
-		"",
-		"Regular",
-	}*/
-
-	//fmt.Printf("%v\n\n", priceListUrlHebRegAlbar.priceListId)
-
-	//q := url.QueryEscape(strings.Join(priceListUrlHebRegAlbar, " "))
-
-	//JsonRaw := ReadPriceList(urls)
-	//err := json.Unmarshal([]byte(JsonRaw), &AlbarRegPriceList)
-	//if err != nil {
-	//	panic(err.Error())
-	//}
-	//for x, _ := range AlbarRegPriceList {
-	/*	fmt.Printf("%d category: %s %s %d %f\n %v\n", x,
-		AlbarRegPriceList[x].CarCategoryCode,
-		AlbarRegPriceList[x].CarCategoryName,
-		AlbarRegPriceList[x].Days,
-		AlbarRegPriceList[x].Price,
-		AlbarRegPriceList[x])*/
-}
-
-//}
-
-//2020-05-21T09:00:00
-//fmt.Println(time.Now())
