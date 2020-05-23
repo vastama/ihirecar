@@ -52,25 +52,6 @@ type CarCategory []struct {
 	ComparePrice              float32 `json:"ComparePrice"`
 }
 
-var age int8
-
-var url3 = []string{"https://rent.albar.co.il/en/rent-in-israel/step/1"}
-var url2 = []string{"https://rent.albar.co.il/umbraco/surface/Fleet/GetResults?categoryId=&countryCode=&driverAge=25&dropOffLocationCode=339&dropoffDate=2020-05-24T09:00:00&guid=78284d45-4c0d-4cec-a8fb-ecfd217956f5&pickupDate=2020-05-21T09:00:00&pickupLocationCode=339&priceListId=1035&promoCode=&userType=Regular"}
-var url1 = []string{"https://rent.albar.co.il/umbraco/surface/Fleet/GetResults?categoryId=&countryCode=&driverAge=28&dropOffLocationCode=300&dropoffDate=2020-05-28T09:00:00&guid=d4f5ebf9-c72a-4cb3-bd8e-e5a0c7ae005e&pickupDate=2020-05-25T09:00:00&pickupLocationCode=300&priceListId=1029&promoCode=&userType=Regular"}
-var urls = []string{
-	albarPriceListUrl + "?" +
-		"categoryId=" +
-		"&countryCode=" +
-		"&driverAge=21" +
-		"&dropOffLocationCode=300" +
-		"&dropoffDate=2020-05-27T09:00:00" +
-		"&guid=f11d41a2-b1f3-4ae4-8eb2-40d619c8a0ca" +
-		"&pickupDate=2020-05-24T09:00:00" +
-		"&pickupLocationCode=300" +
-		"&priceListId=1029" +
-		"&promoCode=" +
-		"&userType=Regular",
-}
 
 type priceListUrl struct {
 	url                 string `json:"url"`
