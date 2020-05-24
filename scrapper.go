@@ -91,7 +91,7 @@ type priceListUrl struct {
 	userType            string `json:"userType"`
 }
 
-var PriceListUrl priceListUrl
+
 
 func ReadPriceList(urlGet priceListUrl) string {
 	//log.Print("ReadPriceList: Price list url:", PriceListUrl)

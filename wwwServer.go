@@ -11,7 +11,7 @@ import (
 
 func ResultsHandler(w http.ResponseWriter, r *http.Request) {
 
-	log.Printf("%v",AlbarRegPriceList[0])
+	//log.Printf("%v",AlbarRegPriceList[0])
 	//log.Print(html.EscapeString(AlbarRegPriceList[0].CarCategoryName))
 	for i := range AlbarRegPriceList {
 		AlbarRegPriceList[i].CarCategoryName = strings.TrimPrefix(AlbarRegPriceList[i].CarCategoryName, "<strong>")
@@ -21,10 +21,12 @@ func ResultsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	page := AlbarRegPriceList
+
 	t, err := template.ParseFiles("templates/results.html")
 	if err != nil {
 		fmt.Printf("Error: %v", err)
 	}
+
 	t.Execute(w, page)
 }
 
@@ -38,7 +40,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 		tmpl.Execute(w, nil)
 		return
 	}
-	PriceListUrl = priceListUrl{
+	PriceListUrl := priceListUrl{
 		pickupDate:          r.FormValue("pickupDate"),
 		dropoffDate:         r.FormValue("dropoffDate"),
 		driverAge:           r.FormValue("driverAge"),
@@ -46,7 +48,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 		pickupLocationCode:  "300",
 		//loginUserName:       "vastama_709",
 		//userType:            "Agency", //Regular
-		priceListId:         DefaultPriceList.Value,   //1029
+		priceListId: DefaultPriceList.Value, //1029
 	}
 
 	tmpl.Execute(w, struct{ Success bool }{true})
@@ -61,13 +63,14 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
-var AlbarRegPriceList = CarCategory{}
+type M map[string]interface{}
 
-var DefaultPriceList = AlbarPricelistList{0,"","1","","1035"}
+var AlbarRegPriceList = CarCategory{}
+var PriceListUrl = priceListUrl{}
+var DefaultPriceList = AlbarPricelistList{0, "", "1", "", "1035"}
 var PROMO = AlbarPricelistList{29, "PROMO", "1", "Pricelist_1040", "1040"}
 var RELIGIOUS = AlbarPricelistList{30, "RELIGIOUS", "1", "Pricelist_1025", "1025"}
 var ISRAEL = AlbarPricelistList{16, "ISRAEL", "1", "Pricelist_1027", "1027"}
-
 
 func main() {
 	//AlbarLogin()
