@@ -8,19 +8,25 @@
 </head>
 <body>
 <h1 class="container">Rental cars Israel</h1>
-
-<div class="container">
-
-
+<h2 class="container">+972-58-771-0101</h2>
+<div class="container" >
 
 {{range .}}
-    <img src="{{ .ImageLink}}" alt=" {{ .CarCategoryName }}">
+
+    <img src="{{ .ImageLink}}" alt=" {{ .CarCategoryName }}" class="responsive">
+    <img src="../images/Europcar_logo.png" alt="Europcar" class="responsive"><br>
     Category: <strong>{{.CarCategoryCode}} {{ .CarCategoryName }} </strong> or similar<br>
-    Price/Day:</strong> {{ .UnitPrice}} {{.Currency}} <br>
+    <strong>Number Of Large Bags:</strong> {{.NumberOfLargeBags}}<br>
+    <strong>Number Of Small Bags:</strong> {{.NumberOfSmallBags}}<br>
+    <strong>Price/Day:</strong> {{ .UnitPrice}} {{.Currency}}USD <br>
     <strong>Days:</strong> {{.Days}} <br>
-    <strong>Total Price:</strong> {{.Price}}{{.Currency}} + VAT
+    <strong>Total Price:</strong> {{.Price}}{{.Currency}}USD + VAT + CDW/LDW&TP
     <hr/>
 {{end}}
+
+    <br>* This booking engine applies only for Incoming Tourists to Israel. Israeli customers (living in Israel) should use the Hebrew Booking Engine with rates displayed in Israeli Shekels (ILS).
+    <br>** VAT: Israeli passport holders are subject to pay VAT by law including dual citizenship passport holders. Only tourists with B2 or B3 visa class passport stamps are waived.
+    <br>*** Loss Damage Waiver & Theft Protection (CDW/LDW & TP) cover damages caused to the vehicle, except the minimum Excess Charges based on car group.
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -9,6 +9,28 @@ import (
 )
 
 const albarPriceListUrl = "https://rent.albar.co.il/umbraco/surface/Fleet/GetResults"
+const albarLoginUrl = "https://rent.albar.co.il/umbraco/surface/Login/Login"
+const albarPriceListListUrl = "https://rent.albar.co.il/umbraco/surface/Login/GetPriceList"
+const albarBranchesListUrl = "https://rent.albar.co.il/umbraco/surface/SearchEngine/GetBranches"
+const EuropCarImage = ""
+
+type AlbarLoginParameters struct {
+	UserName        string `json:"UserName"`        // "vastama_709",
+	Password        string `json:"Password"`        //"",
+	WorkerId        string `json:"WorkerId"`        //"",
+	UserType        string `json:"UserType"`        //"Agent",
+	ConfirmPassword string `json:"ConfirmPassword"` //"",
+	NewPassword     string `json:"NewPassword"`     //"",
+	RememberMe      string `json:"RememberMe"`      // "false",
+}
+
+type AlbarPricelistList struct {
+	PricelistCategoryId int    `json:"PricelistCategoryId"`
+	PricelistCategory   string `json:"PricelistCategory"` //"מזדמנים"
+	CurrencyId          string `json:"CurrencyId"`        //"0"
+	Name                string `json:"Name"`              // "Pricelist_1000"
+	Value               string `json:"Value"`             //"1000"
+}
 
 type CarCategory []struct {
 	Id                        string  `json:"Id"`
@@ -52,7 +74,6 @@ type CarCategory []struct {
 	ComparePrice              float32 `json:"ComparePrice"`
 }
 
-
 type priceListUrl struct {
 	url                 string `json:"url"`
 	categoryId          string `json:"categoryId"`
@@ -61,6 +82,7 @@ type priceListUrl struct {
 	dropOffLocationCode string `json:"dropOffLocationCode"`
 	dropoffDate         string `json:"dropoffDate"`
 	guid                string `json:"guid"`
+	loginUserName       string `json:"loginUserName"`
 	pickupDate          string `json:"pickupDate"`
 	pickupLocationCode  string `json:"pickupLocationCode"`
 	priceListId         string `json:"priceListId"`
@@ -68,22 +90,27 @@ type priceListUrl struct {
 	userType            string `json:"userType"`
 }
 
+
+
+
 var PriceListUrl priceListUrl
 
 func ReadPriceList(urlGet priceListUrl) string {
-	log.Print("ReadPriceList: Price list url:", PriceListUrl)
-	urlGet1 := albarPriceListUrl + "?" + "categoryId=&countryCode=" +
+	//log.Print("ReadPriceList: Price list url:", PriceListUrl)
+	urlGetCurrent := albarPriceListUrl + "?" + "categoryId=&countryCode=" +
 		"&driverAge=" + urlGet.driverAge +
 		"&dropOffLocationCode=" + urlGet.dropOffLocationCode +
 		"&dropoffDate=" + urlGet.dropoffDate + ":00" +
-		"&guid=78284d45-4c0d-4cec-a8fb-ecfd217956f5" +
+		"&guid=4589c7da-6cea-4c3c-b00f-f762e1ae9a87" +
+		"&loginUserName=" + urlGet.loginUserName +
 		"&pickupDate=" + urlGet.pickupDate + ":00" +
 		"&pickupLocationCode=" + urlGet.pickupLocationCode +
 		"&priceListId=" + urlGet.priceListId +
-		"&promoCode=&userType=" + urlGet.userType
-	log.Print("ReadPriceList: Price list urlGet1:", urlGet1)
+		"&promoCode=" +
+		"&userType=" + urlGet.userType
+	log.Print("ReadPriceList: Price list urlGet1:", urlGetCurrent)
 
-	resp, err := http.Get(urlGet1)
+	resp, err := http.Get(urlGetCurrent)
 	if err != nil {
 		log.Fatal("Fatal on Get Url:", err)
 	}
