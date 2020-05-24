@@ -11,7 +11,7 @@ import (
 
 func ResultsHandler(w http.ResponseWriter, r *http.Request) {
 
-	//log.Printf("%s",AlbarRegPriceList[0].CarCategoryName)
+	log.Printf("%v",AlbarRegPriceList[0])
 	//log.Print(html.EscapeString(AlbarRegPriceList[0].CarCategoryName))
 	for i := range AlbarRegPriceList {
 		AlbarRegPriceList[i].CarCategoryName = strings.TrimPrefix(AlbarRegPriceList[i].CarCategoryName, "<strong>")

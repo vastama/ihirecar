@@ -40,6 +40,7 @@ type CarCategory []struct {
 	Currency                  string  `json:"Currency"`
 	CurrencySymbol            string  `json:"CurrencySymbol"`
 	ImageLink                 string  `json:"ImageLink"`
+	NumberOfPeople            int8  `json:"NumberOfPeople"`
 	NumberOfSmallBags         int8    `json:"NumberOfSmallBags"`
 	NumberOfLargeBags         int     `json:"NumberOfLargeBags"`
 	AirConditioner            bool    `json:"AirConditioner"`
@@ -89,9 +90,6 @@ type priceListUrl struct {
 	promoCode           string `json:"promoCode"`
 	userType            string `json:"userType"`
 }
-
-
-
 
 var PriceListUrl priceListUrl
 
